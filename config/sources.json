@@ -8,7 +8,9 @@
       "method": "feed",
       "enabled": true,
       "max_items": 20,
-      "verification": "2026-11-03 GitHub Actions run 41652745895でrobots検査とRSS解析が成功、各10件を取得・採用。記事本文・画像は取得しない。規約による自動取得許諾を確認したものではない。"
+      "verification": "2026-11-03 GitHub Actions run 41652745895でrobots検査とRSS解析が成功、各10件を取得・採用。記事本文・画像は取得しない。規約による自動取得許諾を確認したものではない。",
+      "publisher": "号外NET",
+      "kind": "regional_media"
     },
     {
       "id": "goguynet-okinawa-uruma",
@@ -18,7 +20,9 @@
       "method": "feed",
       "enabled": true,
       "max_items": 20,
-      "verification": "2026-11-03 GitHub Actions run 41652745895でrobots検査とRSS解析が成功、各10件を取得・採用。記事本文・画像は取得しない。規約による自動取得許諾を確認したものではない。"
+      "verification": "2026-11-03 GitHub Actions run 41652745895でrobots検査とRSS解析が成功、各10件を取得・採用。記事本文・画像は取得しない。規約による自動取得許諾を確認したものではない。",
+      "publisher": "号外NET",
+      "kind": "regional_media"
     },
     {
       "id": "dee-okinawa",
@@ -27,7 +31,9 @@
       "url": "https://www.dee-okinawa.com/index.xml",
       "method": "feed",
       "enabled": false,
-      "disabled_reason": "公開記事は文化・街の発見に適合。RSS URL・robots未確認、無断転載禁止表記あり。HTML自動取得は実装せず、手動調査サンプルのタイトルとリンクだけを別ファイルに保存。"
+      "disabled_reason": "2026-11-04 Actions run 41662244605でrobots取得は成功したが、設定中の /index.xml はDTDを含む応答でRSS解析を拒否（xml_dtd_forbidden）。公開RSSを確認できず無効を維持。本文・画像の無断転載禁止も確認。",
+      "publisher": "DEEokinawa",
+      "kind": "regional_media"
     },
     {
       "id": "mypl-naha",
@@ -36,7 +42,9 @@
       "url": "https://naha.mypl.net/",
       "method": "unverified",
       "enabled": false,
-      "disabled_reason": "店舗・生活情報など多分野を確認。RSS・robots・利用条件の確認未了。HTML取得は保留。"
+      "disabled_reason": "店舗・生活情報など多分野を確認。RSS・robots・利用条件の確認未了。HTML取得は保留。",
+      "publisher": "まいぷれ 那覇・浦添・豊見城",
+      "kind": "regional_media"
     },
     {
       "id": "tabearuki",
@@ -45,7 +53,50 @@
       "url": "https://tabearuki.okinawa/",
       "method": "unverified",
       "enabled": false,
-      "disabled_reason": "グルメ中心の外部ブログ集約サイト。RSS・robots・自動取得条件が未確認で、グルメ偏重も避けるため初期収集には不採用。"
+      "disabled_reason": "グルメ中心の外部ブログ集約サイト。RSS・robots・自動取得条件が未確認で、グルメ偏重も避けるため初期収集には不採用。",
+      "publisher": "沖縄食べ歩きアンテナ",
+      "kind": "regional_media"
+    },
+    {
+      "id": "hiija",
+      "name": "ジャブログ",
+      "publisher": "ジャブログ",
+      "kind": "personal_blog",
+      "homepage": "https://hiija.net/",
+      "url": "https://hiija.net/feed/",
+      "method": "feed",
+      "enabled": true,
+      "max_items": 10,
+      "include_categories": [
+        "沖縄イベント",
+        "沖縄本島中部"
+      ],
+      "exclude_categories": [
+        "兵庫県",
+        "沖縄県外"
+      ],
+      "verification": "2026-11-04 Actions run 41662244605でrobots取得・RSS解析成功。10件中、配信カテゴリで沖縄の8件を対象、兵庫県の2件を除外する。",
+      "terms": {
+        "checked_at": "2026-11-04",
+        "url": "https://hiija.net/privacypolicy/",
+        "note": "公開ページへのリンク自由、iframe・画像直リンク禁止、文章・画像の無断転載禁止を確認。公開RSSの短いタイトル・URL・日付・カテゴリだけでリンク紹介し、本文・要約・画像は保存しない。自動再配布の個別許諾を得たという意味ではない。"
+      }
+    },
+    {
+      "id": "okinawa-iju",
+      "name": "沖縄移住ライフハック",
+      "publisher": "沖縄移住ライフハック",
+      "kind": "personal_blog",
+      "homepage": "https://okinawa-iju.info/",
+      "url": "https://okinawa-iju.info/feed/",
+      "method": "feed",
+      "enabled": false,
+      "verification": "2026-11-04 Actions run 41662244605でrobots取得・RSS解析が成功（10件）。",
+      "disabled_reason": "自然・暮らしの分野は適合するが、著作権・免責事項に商用非商用を問わず転載・改編・再配布禁止とある。RSS見出しの公開一覧への再掲載条件は未確認のため、技術的取得成功と区別して定期収集は無効。",
+      "terms": {
+        "checked_at": "2026-11-04",
+        "url": "https://okinawa-iju.info/terms-disclaimer-privacypolicy"
+      }
     }
   ]
 }

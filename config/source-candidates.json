@@ -1,7 +1,26 @@
 {
   "candidates": [
-    {"id": "hiija", "name": "ジャブログ", "url": "https://hiija.net/feed/", "method": "feed", "max_items": 10},
-    {"id": "okinawa-iju", "name": "沖縄移住ライフハック", "url": "https://okinawa-iju.info/feed/", "method": "feed", "max_items": 10},
-    {"id": "dee-okinawa", "name": "DEEokinawa", "url": "https://www.dee-okinawa.com/index.xml", "method": "feed", "max_items": 10}
+    {
+      "id": "hiija",
+      "name": "ジャブログ",
+      "url": "https://hiija.net/feed/",
+      "method": "feed",
+      "max_items": 10
+    },
+    {
+      "id": "okinawa-iju",
+      "name": "沖縄移住ライフハック",
+      "url": "https://okinawa-iju.info/feed/",
+      "method": "feed",
+      "max_items": 10,
+      "skip_reason": "公開一覧へのRSS見出し再掲載条件が未確認。2026-11-04の技術実測ログを参照し、再検証の際は条件を先に確認する。"
+    },
+    {
+      "id": "dee-okinawa",
+      "name": "DEEokinawa",
+      "url": "https://www.dee-okinawa.com/index.xml",
+      "method": "feed",
+      "max_items": 10
+    }
   ]
 }

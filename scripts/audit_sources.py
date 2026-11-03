@@ -32,6 +32,10 @@ def audit(candidates):
     for source in candidates:
         fetcher.requests = []
         result = {"source_id": source["id"], "url": source["url"]}
+        if source.get("skip_reason"):
+            result.update(status="skipped", reason=source["skip_reason"], requests=[])
+            results.append(result)
+            continue
         try:
             articles = fetcher.feed(source)
             result.update(status="ok", robots_check="allowed_by_collector", fetched=len(articles),
