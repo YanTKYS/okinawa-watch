@@ -1,0 +1,69 @@
+{
+  "collected_at": "2026-11-03T23:20:46+09:00",
+  "workflow_run": "https://github.com/YanTKYS/okinawa-watch/actions/runs/41652745895",
+  "sources": [
+    {
+      "source_id": "goguynet-naha",
+      "name": "号外NET 那覇市",
+      "fetched": 10,
+      "accepted": 10,
+      "new": 10,
+      "duplicate": 0,
+      "excluded": {},
+      "status": "ok",
+      "unprocessed": 0
+    },
+    {
+      "source_id": "goguynet-okinawa-uruma",
+      "name": "号外NET 沖縄市・うるま市",
+      "fetched": 10,
+      "accepted": 10,
+      "new": 10,
+      "duplicate": 0,
+      "excluded": {},
+      "status": "ok",
+      "unprocessed": 0
+    },
+    {
+      "source_id": "dee-okinawa",
+      "name": "DEEokinawa",
+      "fetched": 0,
+      "accepted": 0,
+      "new": 0,
+      "duplicate": 0,
+      "excluded": {},
+      "status": "disabled",
+      "reason": "公開記事は文化・街の発見に適合。RSS URL・robots未確認、無断転載禁止表記あり。HTML自動取得は実装せず、手動調査サンプルのタイトルとリンクだけを別ファイルに保存。"
+    },
+    {
+      "source_id": "mypl-naha",
+      "name": "まいぷれ 那覇・浦添・豊見城",
+      "fetched": 0,
+      "accepted": 0,
+      "new": 0,
+      "duplicate": 0,
+      "excluded": {},
+      "status": "disabled",
+      "reason": "店舗・生活情報など多分野を確認。RSS・robots・利用条件の確認未了。HTML取得は保留。"
+    },
+    {
+      "source_id": "tabearuki",
+      "name": "沖縄食べ歩きアンテナ",
+      "fetched": 0,
+      "accepted": 0,
+      "new": 0,
+      "duplicate": 0,
+      "excluded": {},
+      "status": "disabled",
+      "reason": "グルメ中心の外部ブログ集約サイト。RSS・robots・自動取得条件が未確認で、グルメ偏重も避けるため初期収集には不採用。"
+    }
+  ],
+  "total_articles": 20,
+  "topics": {
+    "催し・体験": 12,
+    "文化・学び": 1,
+    "街・暮らし": 4,
+    "その他": 3
+  },
+  "exclusions": []
+}
