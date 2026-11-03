@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-03T23:11:40+09:00",
+  "articles": [
+    {
+      "id": "c6ba42b77f1f71d69367",
+      "source_id": "goguynet-naha",
+      "source_name": "号外NET 那覇市",
+      "title": "【那覇市】古都・京都の魅力を感じるひとときをデパートリウボウで！10月28日〜「秋の京都展」が開催中です。",
+      "url": "https://naha.goguynet.jp/2026/11/01/akinokyoto/",
+      "published_at": "2026-11-01",
+      "source_categories": [],
+      "collected_at": "2026-11-03T23:11:40+09:00",
+      "last_seen_at": "2026-11-03T23:11:40+09:00",
+      "provenance": "manual_research",
+      "timing": null,
+      "labels": [
+        "発見"
+      ],
+      "topic": "催し・体験",
+      "region": "那覇市"
+    },
+    {
+      "id": "160ad5f8527bbcc84163",
+      "source_id": "dee-okinawa",
+      "source_name": "DEEokinawa",
+      "title": "いま大人気のシーサーミニチュアフィギュアとは",
+      "url": "https://www.dee-okinawa.com/koneta/2026/10/sisafigure.html",
+      "published_at": "2026-10-27",
+      "source_categories": [],
+      "collected_at": "2026-11-03T23:11:40+09:00",
+      "last_seen_at": "2026-11-03T23:11:40+09:00",
+      "provenance": "manual_research",
+      "timing": null,
+      "labels": [
+        "発見"
+      ],
+      "topic": "買い物",
+      "region": null
+    },
+    {
+      "id": "014bece95c9f0ff82fc6",
+      "source_id": "dee-okinawa",
+      "source_name": "DEEokinawa",
+      "title": "リニューアルした「やんばる森のおもちゃ美術館」に行ってきた",
+      "url": "https://www.dee-okinawa.com/koneta/2026/10/yambaruomocha.html",
+      "published_at": "2026-10-20",
+      "source_categories": [],
+      "collected_at": "2026-11-03T23:11:40+09:00",
+      "last_seen_at": "2026-11-03T23:11:40+09:00",
+      "provenance": "manual_research",
+      "timing": null,
+      "labels": [
+        "発見"
+      ],
+      "topic": "文化・学び",
+      "region": "国頭村",
+      "region_evidence": "公開ページに明記（手動調査）"
+    },
+    {
+      "id": "e528ff76c9323efe70b2",
+      "source_id": "dee-okinawa",
+      "source_name": "DEEokinawa",
+      "title": "花ブロックを作る「山内コンクリートブロック」を訪ねて",
+      "url": "https://www.dee-okinawa.com/topics/2026/10/yamauchi.html",
+      "published_at": "2026-10-14",
+      "source_categories": [],
+      "collected_at": "2026-11-03T23:11:40+09:00",
+      "last_seen_at": "2026-11-03T23:11:40+09:00",
+      "provenance": "manual_research",
+      "timing": null,
+      "labels": [
+        "発見"
+      ],
+      "topic": "文化・学び",
+      "region": "西原町",
+      "region_evidence": "公開ページに明記（手動調査）"
+    }
+  ]
+}

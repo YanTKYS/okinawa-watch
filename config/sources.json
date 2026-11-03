@@ -1,0 +1,34 @@
+{
+  "sources": [
+    {
+      "id": "goguynet-naha", "name": "号外NET 那覇市",
+      "homepage": "https://naha.goguynet.jp/", "url": "https://naha.goguynet.jp/feed/",
+      "method": "feed", "enabled": true, "max_items": 20,
+      "verification": "2026-11-03 Web取得で application/rss+xml の応答を確認。XML解析・robots は収集時に検査。規約による自動取得許諾を確認したものではない。本文・画像は保存しない。"
+    },
+    {
+      "id": "goguynet-okinawa-uruma", "name": "号外NET 沖縄市・うるま市",
+      "homepage": "https://okinawa-uruma.goguynet.jp/", "url": "https://okinawa-uruma.goguynet.jp/feed/",
+      "method": "feed", "enabled": true, "max_items": 20,
+      "verification": "2026-11-03 Web取得で application/rss+xml の応答を確認。XML解析・robots は収集時に検査。同一媒体の別地域であり媒体多様性は未達。"
+    },
+    {
+      "id": "dee-okinawa", "name": "DEEokinawa",
+      "homepage": "https://www.dee-okinawa.com/", "url": "https://www.dee-okinawa.com/index.xml",
+      "method": "feed", "enabled": false,
+      "disabled_reason": "公開記事は文化・街の発見に適合。RSS URL・robots未確認、無断転載禁止表記あり。HTML自動取得は実装せず、手動調査サンプルのタイトルとリンクだけを別ファイルに保存。"
+    },
+    {
+      "id": "mypl-naha", "name": "まいぷれ 那覇・浦添・豊見城",
+      "homepage": "https://naha.mypl.net/", "url": "https://naha.mypl.net/",
+      "method": "unverified", "enabled": false,
+      "disabled_reason": "店舗・生活情報など多分野を確認。RSS・robots・利用条件の確認未了。HTML取得は保留。"
+    },
+    {
+      "id": "tabearuki", "name": "沖縄食べ歩きアンテナ",
+      "homepage": "https://tabearuki.okinawa/", "url": "https://tabearuki.okinawa/",
+      "method": "unverified", "enabled": false,
+      "disabled_reason": "グルメ中心の外部ブログ集約サイト。RSS・robots・自動取得条件が未確認で、グルメ偏重も避けるため初期収集には不採用。"
+    }
+  ]
+}
