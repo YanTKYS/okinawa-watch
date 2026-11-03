@@ -14,9 +14,9 @@
 - <https://naha.goguynet.jp/feed/>
 - <https://okinawa-uruma.goguynet.jp/feed/>
 
-Web取得ツールは両URLに対して `Unsupported content-type: application/rss+xml` を返した。これはRSS形式のHTTP応答の確認であり、フィードXMLの正常解析・継続的自動取得・利用許諾の確認ではない。`enabled: true` は収集時に検証を試みる設定。各オリジンのrobotsが取得不能・取得禁止なら、フィード取得まで進まない。404/410のみrobots無しとして扱う。
+Web取得ツールは両URLに対して `Unsupported content-type: application/rss+xml` を返した。この段階ではRSS形式のHTTP応答だけを確認。その後、[GitHub Actions run 41652745895](https://github.com/YanTKYS/okinawa-watch/actions/runs/41652745895)で両源のrobots検査とRSS解析に成功し、各10件を取得・採用した。継続稼働や利用許諾の確認とは区別する。`enabled: true` は収集時に検証を試みる設定。各オリジンのrobotsが取得不能・取得禁止なら、フィード取得まで進まない。404/410のみrobots無しとして扱う。
 
-DEEokinawaの `/atom.xml` と `/index.xml`、食べ歩きアンテナの `/rss` はWebツールで取得不能だった。非公開・存在しないと断定できないため採用していない。まいぷれのRSSは確認できていない。全候補でrobotsのWeb取得は失敗した。
+DEEokinawaの `/atom.xml` と `/index.xml`、食べ歩きアンテナの `/rss` はWebツールで取得不能だった。非公開・存在しないと断定できないため採用していない。まいぷれのRSSは確認できていない。全候補でrobotsのWebツール取得は失敗したが、号外NETの2地域はActionsからの取得と検査が成功した。
 
 RSSは1回につき各源1リクエスト（別にrobotsを1回）、同一オリジン間2秒以上、15秒タイムアウト、2MB上限。robotsのCrawl-delay・Request-rateも反映し、30秒を超える待ち時間が必要な源は見送る。別オリジンへのリダイレクトは追わない。記事ページ・ページ送り・画像は取得しない。
 

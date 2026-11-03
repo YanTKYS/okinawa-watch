@@ -72,6 +72,8 @@ class WatchTests(unittest.TestCase):
         self.assertEqual(w.timing("2026/11/03〜2026/11/08 開催")["end"], "2026-11-08")
         self.assertIsNone(w.timing("2026年11月8日まで割引")["start"])
         self.assertEqual(w.classify(item("無料体験"), RULES)["labels"], ["お得"])
+        self.assertEqual(w.classify(item("ガレッジセール・ゴリさんのイベント"), RULES)["labels"], ["発見"])
+        self.assertEqual(w.classify(item("格安プラン"), RULES)["labels"], ["お得"])
         self.assertEqual(w.classify(item("イベント開催", published_at="2026-11-03"), RULES)["labels"], ["発見"])
 
     def test_dedup_failure_isolation_and_audit(self):
