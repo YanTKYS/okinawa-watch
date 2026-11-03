@@ -1,0 +1,275 @@
+{
+  "evaluated_on_jst": "2026-11-03",
+  "policy": {
+    "unverified_max_age_days": 14,
+    "event_topics": [
+      "催し・体験"
+    ],
+    "event_keywords": [
+      "開催",
+      "開かれ",
+      "行われ",
+      "イベント",
+      "フェス",
+      "まつり",
+      "祭り",
+      "祭典",
+      "セレモニー"
+    ],
+    "deadline_keywords": [
+      "限定",
+      "締切",
+      "まで",
+      "期間",
+      "セール",
+      "閉店"
+    ]
+  },
+  "counts": {
+    "visible": 17,
+    "old_unverified": 1,
+    "confirmed_ended": 2
+  },
+  "articles": [
+    {
+      "id": "e91725480889c4e82908",
+      "title": "【那覇市】ガレッジセール・ゴリさん初プロデュース「ゴリオキナワフェス2026」が11月7日・8日に開催されます！",
+      "url": "https://naha.goguynet.jp/2026/11/03/goriokinawa/",
+      "status": "unverified_event",
+      "event": true,
+      "unverified": true,
+      "hidden_reason": null,
+      "reference_date": "2026-11-03",
+      "reference_kind": "published",
+      "age_days": 0
+    },
+    {
+      "id": "d0e2d32a713c6618c911",
+      "title": "【那覇市】読書の秋といえば！沖縄県立図書館で「第17回 としょかんまつり」が11月3日に開催されます。",
+      "url": "https://naha.goguynet.jp/2026/11/02/tosyokanmaturi/",
+      "status": "unverified_event",
+      "event": true,
+      "unverified": true,
+      "hidden_reason": null,
+      "reference_date": "2026-11-02",
+      "reference_kind": "published",
+      "age_days": 1
+    },
+    {
+      "id": "c6ba42b77f1f71d69367",
+      "title": "【那覇市】古都・京都の魅力を感じるひとときをデパートリウボウで！10月28日〜「秋の京都展」が開催中です。",
+      "url": "https://naha.goguynet.jp/2026/11/01/akinokyoto/",
+      "status": "unverified_event",
+      "event": true,
+      "unverified": true,
+      "hidden_reason": null,
+      "reference_date": "2026-11-01",
+      "reference_kind": "published",
+      "age_days": 2
+    },
+    {
+      "id": "db01c2c7becca1fe2de1",
+      "title": "【那覇市】正殿完成への歩みを祝う秋の祭典！「令和8年度 首里城復興祭」が11月1日〜3日に開催されます。",
+      "url": "https://naha.goguynet.jp/2026/10/31/shurijocastlefes/",
+      "status": "unverified_event",
+      "event": true,
+      "unverified": true,
+      "hidden_reason": null,
+      "reference_date": "2026-10-31",
+      "reference_kind": "published",
+      "age_days": 3
+    },
+    {
+      "id": "e24bb27448d93857a9a3",
+      "title": "【那覇市】10月31日、11月1日の2日間、沖縄県護國神社で「蚤の市」＆映画「二宮金次郎」上映会が開催されます！",
+      "url": "https://naha.goguynet.jp/2026/10/30/nominoichi/",
+      "status": "unverified_event",
+      "event": true,
+      "unverified": true,
+      "hidden_reason": null,
+      "reference_date": "2026-10-30",
+      "reference_kind": "published",
+      "age_days": 4
+    },
+    {
+      "id": "d51c7e28fb00015e38e1",
+      "title": "【那覇市】タコス・音楽・ルチャリブレ！那覇市泊緑地で「琉球メキシカンフェスタ2026」初開催されます！",
+      "url": "https://naha.goguynet.jp/2026/10/29/mexicanfesta/",
+      "status": "unverified_event",
+      "event": true,
+      "unverified": true,
+      "hidden_reason": null,
+      "reference_date": "2026-10-29",
+      "reference_kind": "published",
+      "age_days": 5
+    },
+    {
+      "id": "00ec897f0aa3873d1df2",
+      "title": "【那覇市】仮装コンテストやステージショーで盛り上がろう！「カフーナ旭橋ハロウィン2026」が10月30日に開催！",
+      "url": "https://naha.goguynet.jp/2026/10/28/halloween-2/",
+      "status": "unverified_event",
+      "event": true,
+      "unverified": true,
+      "hidden_reason": null,
+      "reference_date": "2026-10-28",
+      "reference_kind": "published",
+      "age_days": 6
+    },
+    {
+      "id": "947652d0ee8d886f8d28",
+      "title": "【那覇市】「県民の台所」のエネルギーがあふれる「のうれんプラザ9周年感謝祭」が10月31日・11月1日に開催されます！",
+      "url": "https://naha.goguynet.jp/2026/10/28/nourenpuraza/",
+      "status": "unverified_event",
+      "event": true,
+      "unverified": true,
+      "hidden_reason": null,
+      "reference_date": "2026-10-28",
+      "reference_kind": "published",
+      "age_days": 6
+    },
+    {
+      "id": "e82a7ceab66a570c384b",
+      "title": "【うるま市】石川運動公園で、11/8に元プロ野球選手・大嶺祐太さんのトークショーもある入場無料の「JOIN NOW2026」が開かれます。",
+      "url": "https://okinawa-uruma.goguynet.jp/2026/10/27/join-now2026/",
+      "status": "unverified_event",
+      "event": true,
+      "unverified": true,
+      "hidden_reason": null,
+      "reference_date": "2026-10-27",
+      "reference_kind": "published",
+      "age_days": 7
+    },
+    {
+      "id": "64bf076e372a1de6afbd",
+      "title": "【那覇市】秋の恒例！「第21回 壺屋やちむん通り祭り 2026」が今週末10月31日に開催されます！",
+      "url": "https://naha.goguynet.jp/2026/10/27/yatimunmaturi/",
+      "status": "unverified_event",
+      "event": true,
+      "unverified": true,
+      "hidden_reason": null,
+      "reference_date": "2026-10-27",
+      "reference_kind": "published",
+      "age_days": 7
+    },
+    {
+      "id": "e2e30ebce36c58c52f8d",
+      "title": "【沖縄市】越来水辺公園周辺で、11/8に10の自治会が共催する「第19回 越来城下まつり」が開かれます。",
+      "url": "https://okinawa-uruma.goguynet.jp/2026/10/26/goeku-matsuri/",
+      "status": "unverified_event",
+      "event": true,
+      "unverified": true,
+      "hidden_reason": null,
+      "reference_date": "2026-10-26",
+      "reference_kind": "published",
+      "age_days": 8
+    },
+    {
+      "id": "244269c089d6051bf6fc",
+      "title": "【南風原町】長期・マンスリー利用にぴったり！「JBレンタカー 沖縄南風原店」のお得な格安プランはいかがでしょうか！",
+      "url": "https://naha.goguynet.jp/2026/10/26/jbrentalcars/",
+      "status": "discovery",
+      "event": false,
+      "unverified": false,
+      "hidden_reason": null,
+      "reference_date": "2026-10-26",
+      "reference_kind": "published",
+      "age_days": 8
+    },
+    {
+      "id": "0474664dcd5e1739cec7",
+      "title": "【うるま市】イオン具志川店など5会場で、11/28・29に巡視船の特別公開もある「第22回うるま市産業まつり」が開かれます。",
+      "url": "https://okinawa-uruma.goguynet.jp/2026/10/25/uruma-sangyo/",
+      "status": "unverified_event",
+      "event": true,
+      "unverified": true,
+      "hidden_reason": null,
+      "reference_date": "2026-10-25",
+      "reference_kind": "published",
+      "age_days": 9
+    },
+    {
+      "id": "08bc26dcbefea95de3a9",
+      "title": "【沖縄市】コザの築50年を超えるビルを再生した拠点「ROCX（ロックス）」が開設され、11/19にオープニングセレモニーが行われます。",
+      "url": "https://okinawa-uruma.goguynet.jp/2026/10/24/rocx-koza/",
+      "status": "unverified_event",
+      "event": true,
+      "unverified": true,
+      "hidden_reason": null,
+      "reference_date": "2026-10-24",
+      "reference_kind": "published",
+      "age_days": 10
+    },
+    {
+      "id": "2b8a6dd948552c15e939",
+      "title": "【沖縄市】沖縄市農民研修センターグラウンドで、11/1に伝統芸能の披露がある「第14回美ら里まつり」が開かれます。",
+      "url": "https://okinawa-uruma.goguynet.jp/2026/10/23/churasato-matsuri-2026/",
+      "status": "unverified_event",
+      "event": true,
+      "unverified": true,
+      "hidden_reason": null,
+      "reference_date": "2026-10-23",
+      "reference_kind": "published",
+      "age_days": 11
+    },
+    {
+      "id": "6b3b27f57e2b94467164",
+      "title": "【沖縄市】諸見里のコザ運動公園で、11/7に「キングスフリースローカップ」のある「KOZAスポーツフェス2026」が開かれます。",
+      "url": "https://okinawa-uruma.goguynet.jp/2026/10/22/kozasportsfes-2026/",
+      "status": "unverified_event",
+      "event": true,
+      "unverified": true,
+      "hidden_reason": null,
+      "reference_date": "2026-10-22",
+      "reference_kind": "published",
+      "age_days": 12
+    },
+    {
+      "id": "6a6eceece08892da4e64",
+      "title": "【沖縄市】中央の「大衆焼肉(A)キンジテ コザ店」が、10/31で閉店します。",
+      "url": "https://okinawa-uruma.goguynet.jp/2026/10/21/kimjite-koza/",
+      "status": "unverified_deadline",
+      "event": false,
+      "unverified": true,
+      "hidden_reason": null,
+      "reference_date": "2026-10-21",
+      "reference_kind": "published",
+      "age_days": 13
+    },
+    {
+      "id": "a32be7351ffc89c4f904",
+      "title": "【沖縄市・うるま市】7日ごろまで大雨が続く可能性。あなたの家の浸水リスク、知っていますか？",
+      "url": "https://okinawa-uruma.goguynet.jp/2026/09/03/mamorioh-heavyrain/",
+      "status": "unverified_deadline",
+      "event": false,
+      "unverified": true,
+      "hidden_reason": "old_unverified",
+      "reference_date": "2026-09-03",
+      "reference_kind": "published",
+      "age_days": 61
+    },
+    {
+      "id": "3171095245235943f680",
+      "title": "【うるま市】作家さんが主役の1日！「クリエイターズ感謝祭」が2026年1月25日（日）に開催されます。",
+      "url": "https://okinawa-uruma.goguynet.jp/2026/01/13/handmade/",
+      "status": "ended",
+      "event": true,
+      "unverified": false,
+      "hidden_reason": "confirmed_ended",
+      "reference_date": "2026-01-13",
+      "reference_kind": "published",
+      "age_days": 294
+    },
+    {
+      "id": "d94501794759403094a1",
+      "title": "【沖縄市】応援が街の力になる。コザの街で育つマーケット「KSA ROOTS MARKET」が2026年1月25日（日）に開催されます。",
+      "url": "https://okinawa-uruma.goguynet.jp/2026/01/12/ksa/",
+      "status": "ended",
+      "event": true,
+      "unverified": false,
+      "hidden_reason": "confirmed_ended",
+      "reference_date": "2026-01-12",
+      "reference_kind": "published",
+      "age_days": 295
+    }
+  ]
+}

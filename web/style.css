@@ -312,3 +312,35 @@ footer {
     font-size:1rem;
   }
 }
+.filters [data-filter="催し（日付未確認）"] {
+  grid-column: 1 / -1;
+}
+.filter-help {
+  font-size: .85rem;
+  margin: 14px 0 0;
+  color: var(--muted);
+}
+.tag.unverified {
+  color: #6d4914;
+  background: #fff1dc;
+}
+.tag.verified {
+  color: #19573f;
+  background: #e5f1e9;
+}
+.freshness {
+  font-size: .82rem;
+  color: var(--muted);
+  margin: 7px 0;
+}
+#visibility-log {
+  padding-left: 22px;
+}
+#visibility-log li {
+  margin-bottom: 12px;
+}
+@media (max-width: 560px) {
+  .subfilters .check {
+    width: 100%;
+  }
+}

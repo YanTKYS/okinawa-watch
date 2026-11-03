@@ -341,7 +341,7 @@ def collect(sources, rules, previous, now=None, fetcher=None):
     return document, report
 
 
-def build(data_path, report_path, output, sample=False):
+def build(data_path, report_path, output, sample=False, rules=None):
     output = Path(output)
     output.mkdir(parents=True, exist_ok=True)
     for asset in (ROOT / "web").iterdir():
@@ -349,6 +349,14 @@ def build(data_path, report_path, output, sample=False):
             shutil.copyfile(asset, output / asset.name)
     data = load(data_path)
     data["sample_mode"] = sample
+    policy = (rules if rules is not None else load(ROOT / "config/rules.json"))["display"]
+    days = policy["unverified_max_age_days"]
+    if type(days) is not int or days < 0:
+        raise ValueError("display.unverified_max_age_days must be a non-negative integer")
+    for key in ("event_topics", "event_keywords", "deadline_keywords"):
+        if not isinstance(policy[key], list) or not all(isinstance(v, str) for v in policy[key]):
+            raise ValueError("display." + key + " must be a list of strings")
+    data["display_policy"] = policy
     save(output / "articles.json", data)
     report = load(report_path) if Path(report_path).exists() else None
     # Full exclusion audit stays in Actions artifacts/local logs, not on Pages.
@@ -384,7 +392,7 @@ def main():
             print("WARNING: no source succeeded; previous data retained. See collection-report.json.")
     else:
         path = ROOT / "data/research-sample.json" if args.sample else args.data
-        build(path, args.report, args.output, args.sample)
+        build(path, args.report, args.output, args.sample, load(args.rules))
 
 
 if __name__ == "__main__":
