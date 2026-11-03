@@ -191,14 +191,16 @@ class SourceFailure(Exception):
 
 
 class SameOriginRedirect(HTTPRedirectHandler):
-    def __init__(self, origin, allowed):
+    def __init__(self, origin, allowed, pace=lambda: None):
         self.origin = origin
         self.allowed = allowed
+        self.pace = pace
 
     def redirect_request(self, req, fp, code, msg, headers, newurl):
         newurl = urljoin(req.full_url, newurl)
         if origin(newurl) != self.origin or not self.allowed(newurl):
             raise SourceFailure("redirect_not_allowed")
+        self.pace()
         return super().redirect_request(req, fp, code, msg, headers, newurl)
 
 
@@ -214,10 +216,12 @@ class Fetcher:
     def get(self, url, delay=2, allowed=lambda url: True):
         canonical_url(url)  # Reject non-HTTP URLs and credential-bearing addresses.
         key = origin(url)
-        if key in self.last_request:
-            time.sleep(max(0, delay - (time.monotonic() - self.last_request[key])))
-        opener = build_opener(SameOriginRedirect(key, allowed))
-        self.last_request[key] = time.monotonic()
+        def pace():
+            if key in self.last_request:
+                time.sleep(max(0, delay - (time.monotonic() - self.last_request[key])))
+            self.last_request[key] = time.monotonic()
+        pace()
+        opener = build_opener(SameOriginRedirect(key, allowed, pace))
         request = Request(url, headers={"User-Agent": USER_AGENT, "Accept-Encoding": "identity"})
         with opener.open(request, timeout=15) as response:
             payload = response.read(MAX_BYTES + 1)
@@ -233,7 +237,10 @@ class Fetcher:
         robots_url = urlunsplit((parts.scheme, parts.netloc, "/robots.txt", "", ""))
         robot = RobotFileParser()
         try:
-            robot.parse(self.get(robots_url).decode("utf-8-sig").splitlines())
+            robots_text = self.get(robots_url).decode("utf-8-sig")
+            if robots_text.lstrip().startswith("<"):
+                raise SourceFailure("robots_invalid_response")
+            robot.parse(robots_text.splitlines())
         except HTTPError as error:
             if error.code in (404, 410):
                 robot.parse([])

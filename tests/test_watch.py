@@ -108,7 +108,8 @@ class WatchTests(unittest.TestCase):
         fetcher = w.Fetcher()
         cases = [(URLError("offline"), "robots_unavailable"),
                  (HTTPError("url", 403, "Forbidden", {}, None), "robots_http_403"),
-                 (b"User-agent: *\nDisallow: /feed", "robots_disallow")]
+                 (b"User-agent: *\nDisallow: /feed", "robots_disallow"),
+                 (b"<html>blocked</html>", "robots_invalid_response")]
         for response, reason in cases:
             with patch.object(fetcher, "get", side_effect=response if isinstance(response, Exception) else [response]):
                 with self.assertRaisesRegex(w.SourceFailure, reason):
@@ -122,6 +123,10 @@ class WatchTests(unittest.TestCase):
         for target in ["http://example.com/feed", "https://other.com/feed", "https://example.com/private"]:
             with self.assertRaises(w.SourceFailure):
                 redirect.redirect_request(request, None, 302, "", {}, target)
+        paced = []
+        redirect = w.SameOriginRedirect(w.origin(SOURCE["url"]), lambda url: True, lambda: paced.append(True))
+        self.assertEqual(redirect.redirect_request(request, None, 302, "", {}, "https://example.com/feed/").full_url, "https://example.com/feed/")
+        self.assertEqual(paced, [True])
         fetcher = w.Fetcher()
         with patch.object(fetcher, "get", return_value=b"User-agent: *\nCrawl-delay: 60"):
             with self.assertRaisesRegex(w.SourceFailure, "budget"):
