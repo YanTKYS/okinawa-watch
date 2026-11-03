@@ -25,17 +25,26 @@ def distribution(articles, sources):
             "largest_publisher_percent": round(max(publishers.values(), default=0) * 100 / total, 1) if total else 0}
 
 
-def compare(data, source_config, baseline_publishers, collection=None):
+def compare(data, source_config, baseline_publishers, collection=None, display_report=None):
     sources = {s["id"]: s for s in source_config["sources"]}
     articles = data["articles"]
     baseline = [a for a in articles if publisher(a, sources) in baseline_publishers]
-    return {"collected_at": data.get("updated_at"), "baseline_publishers": baseline_publishers,
+    result = {"collected_at": data.get("updated_at"), "baseline_publishers": baseline_publishers,
             "before": distribution(baseline, sources), "after": distribution(articles, sources),
             "source_results": (collection or {}).get("sources", []),
             "samples": [{"publisher": publisher(a, sources), "source_id": a["source_id"],
                          "title": a["title"], "url": a["url"], "topic": a["topic"],
                          "published_at": a.get("published_at")} for a in articles
                         if publisher(a, sources) not in baseline_publishers]}
+
+    if display_report is not None:
+        visible_ids = {a["id"] for a in display_report["articles"] if not a["hidden_reason"]}
+        visible = [a for a in articles if a["id"] in visible_ids]
+        visible_baseline = [a for a in visible if publisher(a, sources) in baseline_publishers]
+        result.update(display_evaluated_on_jst=display_report["evaluated_on_jst"],
+                      visible_before=distribution(visible_baseline, sources),
+                      visible_after=distribution(visible, sources))
+    return result
 
 
 def main():
@@ -44,10 +53,12 @@ def main():
     parser.add_argument("--sources", type=Path, default=ROOT / "config/sources.json")
     parser.add_argument("--collection", type=Path, default=ROOT / "work/live-report.json")
     parser.add_argument("--baseline-publisher", action="append", required=True)
+    parser.add_argument("--display-report", type=Path)
     parser.add_argument("--output", type=Path, default=ROOT / "work/source-comparison.json")
     args = parser.parse_args()
     result = compare(load(args.data), load(args.sources), args.baseline_publisher,
-                     load(args.collection) if args.collection.exists() else None)
+                     load(args.collection) if args.collection.exists() else None,
+                     load(args.display_report) if args.display_report else None)
     save(args.output, result)
     print("SOURCE_COMPARISON_JSON=" + json.dumps(result, ensure_ascii=False))
 

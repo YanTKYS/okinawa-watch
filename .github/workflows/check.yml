@@ -21,7 +21,6 @@ jobs:
       - run: node --test tests/display.test.cjs
       - name: Live feed smoke check (no publication, no credentials)
         run: python scripts/watch.py collect --data work/live-articles.json --report work/live-report.json
-      - run: python scripts/source_report.py --baseline-publisher '号外NET'
       - name: Inspect accepted metadata
         run: |
           python - <<'PYTHON'
@@ -32,6 +31,7 @@ jobs:
           PYTHON
       - run: python scripts/watch.py build --data work/live-articles.json --report work/live-report.json
       - run: node scripts/display-report.cjs work/live-articles.json > work/display-report.json
+      - run: python scripts/source_report.py --baseline-publisher '号外NET' --display-report work/display-report.json
       - run: python scripts/watch.py build --sample --output work/sample-site
       - uses: actions/upload-artifact@v4
         with:

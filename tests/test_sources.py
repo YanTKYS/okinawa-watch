@@ -58,6 +58,12 @@ class SourceTests(unittest.TestCase):
         self.assertEqual(comparison['after']['food_percent'],33.3)
         self.assertEqual(comparison['after']['largest_publisher_percent'],66.7)
         self.assertEqual(len(comparison['samples']),1)
+        display={'evaluated_on_jst':'2026-11-04','articles':[
+            {'id':a['id'],'hidden_reason':None if a['publisher']=='号外NET' else 'old_unverified'} for a in data['articles']]}
+        visible=compare(data,{'sources':sources},['号外NET'],report,display)
+        self.assertEqual(visible['visible_before']['total'],2)
+        self.assertEqual(visible['visible_after']['total'],2)
+        self.assertEqual(visible['visible_after']['publisher_count'],1)
 
     def test_existing_records_gain_publisher_without_refreshing_first_seen(self):
         sources=[source('naha')]

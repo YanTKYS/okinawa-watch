@@ -34,6 +34,8 @@ python3 -m http.server 8001 --directory work/sample-site
 
 情報源は `enabled` で切替。追加時は公開フィードURL・robots・利用条件を確認します。HTML取得は未実装です。除外配列を空にすれば、その種類の除外を無効にできます。初期値の「辺野古」「県知事」「PFAS」等は自由に編集できます。
 
+情報源の `publisher` は地域別フィードをまとめる媒体名です。`include_categories`（空なら制限なし）・`exclude_categories` で源固有の配信カテゴリも正規化した完全一致で制御できます。これは全体の除外ルールに追加され、既存記事にも再適用されます。
+
 除外は記事タイトルと配信カテゴリに適用。過去の採用データにも次の収集時に再適用します。除外理由・タイトル・URLは監査ログに記録し、Pagesには公開しません。保持は90日・最大500件です。
 
 分野は `topic_categories` に一致する配信カテゴリを優先し、該当しなければ `topics` のタイトルキーワードを使います。カテゴリは正規化した完全一致で判定し、複数の分野に一致する場合は設定内の順序を優先します。`topic_categories` を空にするとタイトルだけの分類に戻せます。
@@ -66,3 +68,5 @@ node --test tests/display.test.cjs
 PRではテスト・少量の実取得・静的生成を行い、結果をartifactで確認できます。公開は行いません。既定ブランチのコードだけが配信対象です。Actions／Pagesの実行可否やリポジトリ設定は、初回実行で確認が必要です。
 
 情報源の調査根拠・実取得の成否・受け入れ条件の状況は [docs/verification.md](docs/verification.md) にまとめています。
+
+別媒体の取得・条件確認と追加前後の評価は [docs/source-diversity.md](docs/source-diversity.md)。CIの `source-comparison.json` では、号外NETの2地域を1媒体として、採用全件と通常表示それぞれの媒体・分野の比率を確認できます。
