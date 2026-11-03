@@ -166,6 +166,13 @@ class WatchTests(unittest.TestCase):
             w.build(path / "data.json", path / "report.json", path / "site")
             self.assertNotIn("exclusions", w.load(path / "site/status.json"))
             self.assertFalse(w.load(path / "site/articles.json")["sample_mode"])
+            self.assertEqual(w.load(path / "site/articles.json")["display_policy"], RULES["display"])
+            custom = {**RULES, "display": {**RULES["display"], "unverified_max_age_days": 3}}
+            w.build(path / "data.json", path / "report.json", path / "custom", rules=custom)
+            self.assertEqual(w.load(path / "custom/articles.json")["display_policy"]["unverified_max_age_days"], 3)
+            invalid = {**custom, "display": {**custom["display"], "unverified_max_age_days": -1}}
+            with self.assertRaises(ValueError):
+                w.build(path / "data.json", path / "report.json", path / "invalid", rules=invalid)
             self.assertTrue((path / "site/index.html").exists())
 
 

@@ -18,6 +18,7 @@ jobs:
           python-version: '3.12'
       - run: python -m unittest discover -s tests -v
       - run: node --check web/app.js
+      - run: node --test tests/display.test.cjs
       - name: Live feed smoke check (no publication, no credentials)
         run: python scripts/watch.py collect --data work/live-articles.json --report work/live-report.json
       - name: Inspect accepted metadata
@@ -29,6 +30,7 @@ jobs:
           print('COLLECTED_DATA_JSON=' + json.dumps(data, ensure_ascii=False))
           PYTHON
       - run: python scripts/watch.py build --data work/live-articles.json --report work/live-report.json
+      - run: node scripts/display-report.cjs work/live-articles.json > work/display-report.json
       - run: python scripts/watch.py build --sample --output work/sample-site
       - uses: actions/upload-artifact@v4
         with:
@@ -37,4 +39,5 @@ jobs:
             work/site
             work/sample-site
             work/live-report.json
+            work/display-report.json
           retention-days: 14
