@@ -180,8 +180,12 @@ def classify(article, rules):
     if any(normalized(k) in normalized(title) for k in rules["deal_keywords"] if k):
         labels.append("お得")
     article["labels"] = labels or ["発見"]
-    article["topic"] = next((topic for topic, words in rules["topics"].items()
-                              if any(normalized(w) in normalized(title) for w in words)), "その他")
+    categories = {normalized(c) for c in article.get("source_categories", [])}
+    # Exact category matches outrank title words; config order breaks ties.
+    topic = next((topic for topic, values in rules.get("topic_categories", {}).items()
+                  if any(c and normalized(c) in categories for c in values)), None)
+    article["topic"] = topic or next((topic for topic, words in rules["topics"].items()
+                                     if any(normalized(w) in normalized(title) for w in words)), "その他")
     article["region"] = next((region for region in rules["regions"] if region in title), None)
     return article
 

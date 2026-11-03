@@ -76,6 +76,30 @@ class WatchTests(unittest.TestCase):
         self.assertEqual(w.classify(item("格安プラン"), RULES)["labels"], ["お得"])
         self.assertEqual(w.classify(item("イベント開催", published_at="2026-11-03"), RULES)["labels"], ["発見"])
 
+    def test_feed_category_outranks_park_in_event_title(self):
+        article = w.classify(item("公園で無料体験", source_categories=["イベント"]), RULES)
+        self.assertEqual(article["topic"], "催し・体験")
+        self.assertEqual(article["labels"], ["お得"])
+        self.assertIsNone(article["timing"])
+
+    def test_topic_category_matches_are_exact_and_configurable(self):
+        for categories in (["まち", "イベント"], ["イベント", "まち"]):
+            self.assertEqual(w.classify(item(source_categories=categories), RULES)["topic"], "催し・体験")
+        rules = {**RULES, "topic_categories": {"買い物": ["event"]}}
+        self.assertEqual(w.classify(item(source_categories=["ＥＶＥＮＴ"]), rules)["topic"], "買い物")
+        # Disabling mappings restores title fallback; unknown categories do too.
+        rules["topic_categories"] = {}
+        self.assertEqual(w.classify(item("公園", source_categories=["イベント"]), rules)["topic"], "街・暮らし")
+        for categories in ([], ["未知のカテゴリ"], ["イベント情報"]):
+            self.assertEqual(w.classify(item(source_categories=categories), RULES)["topic"], "文化・学び")
+
+    def test_category_corrections_reclassify_existing_records(self):
+        data, _ = w.collect([SOURCE], RULES, {"articles": []}, NOW,
+                            StubFetcher({"example": [item("公園で催し", source_categories=["イベント"])]}))
+        rules = {**RULES, "topic_categories": {"街・暮らし": ["イベント"]}}
+        revised, _ = w.collect([], rules, data, NOW)
+        self.assertEqual(revised["articles"][0]["topic"], "街・暮らし")
+
     def test_dedup_failure_isolation_and_audit(self):
         sources = [SOURCE, {**SOURCE, "id": "failed"}]
         fetcher = StubFetcher({"example": [item(), item(url="https://example.com/1?utm_source=x"), item("県知事の発表")], "failed": URLError("timeout")})
