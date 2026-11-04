@@ -1,7 +1,55 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-04T00:10:06+09:00",
+  "updated_at": "2026-11-04T12:37:49+09:00",
   "articles": [
+    {
+      "title": "【那覇市】浴衣で歩いて街を彩ろう！「那覇ユカタまつり in おきえい通り」に参加して1日限りの街歩きをしてみませんか？",
+      "url": "https://naha.goguynet.jp/2026/11/04/yukatamatsuri/",
+      "published_at": "2026-11-04T06:36:46+09:00",
+      "source_categories": [
+        "イベント",
+        "おきえい通り",
+        "ジュンク堂書店",
+        "ユカタまつり"
+      ],
+      "id": "1e0cb0d68fa5d427b8f0",
+      "source_id": "goguynet-naha",
+      "source_name": "号外NET 那覇市",
+      "publisher": "号外NET",
+      "collected_at": "2026-11-04T12:37:49+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
+      "provenance": "feed",
+      "timing": null,
+      "labels": [
+        "発見"
+      ],
+      "topic": "催し・体験",
+      "region": "那覇市"
+    },
+    {
+      "title": "【那覇市】県内最大級のクラフトビールの祭典！「ちゃんぷる～フェスティバル2026秋」が11月6日〜8日に開催されます。",
+      "url": "https://naha.goguynet.jp/2026/11/04/chanpurufes-2/",
+      "published_at": "2026-11-04T06:36:19+09:00",
+      "source_categories": [
+        "イベント",
+        "さいおんスクエア",
+        "ちゃんぷるーフェスティバル",
+        "牧志駅"
+      ],
+      "id": "f67dbe83729e28d27e5c",
+      "source_id": "goguynet-naha",
+      "source_name": "号外NET 那覇市",
+      "publisher": "号外NET",
+      "collected_at": "2026-11-04T12:37:49+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
+      "provenance": "feed",
+      "timing": null,
+      "labels": [
+        "発見"
+      ],
+      "topic": "催し・体験",
+      "region": "那覇市"
+    },
     {
       "title": "【那覇市】ガレッジセール・ゴリさん初プロデュース「ゴリオキナワフェス2026」が11月7日・8日に開催されます！",
       "url": "https://naha.goguynet.jp/2026/11/03/goriokinawa/",
@@ -16,14 +64,15 @@
       "source_id": "goguynet-naha",
       "source_name": "号外NET 那覇市",
       "collected_at": "2026-11-03T23:20:46+09:00",
-      "last_seen_at": "2026-11-04T00:10:06+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
         "発見"
       ],
       "topic": "催し・体験",
-      "region": "那覇市"
+      "region": "那覇市",
+      "publisher": "号外NET"
     },
     {
       "title": "【那覇市】読書の秋といえば！沖縄県立図書館で「第17回 としょかんまつり」が11月3日に開催されます。",
@@ -39,14 +88,15 @@
       "source_id": "goguynet-naha",
       "source_name": "号外NET 那覇市",
       "collected_at": "2026-11-03T23:20:46+09:00",
-      "last_seen_at": "2026-11-04T00:10:06+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
         "発見"
       ],
       "topic": "催し・体験",
-      "region": "那覇市"
+      "region": "那覇市",
+      "publisher": "号外NET"
     },
     {
       "title": "【那覇市】古都・京都の魅力を感じるひとときをデパートリウボウで！10月28日〜「秋の京都展」が開催中です。",
@@ -62,14 +112,15 @@
       "source_id": "goguynet-naha",
       "source_name": "号外NET 那覇市",
       "collected_at": "2026-11-03T23:20:46+09:00",
-      "last_seen_at": "2026-11-04T00:10:06+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
         "発見"
       ],
       "topic": "催し・体験",
-      "region": "那覇市"
+      "region": "那覇市",
+      "publisher": "号外NET"
     },
     {
       "title": "【那覇市】正殿完成への歩みを祝う秋の祭典！「令和8年度 首里城復興祭」が11月1日〜3日に開催されます。",
@@ -85,14 +136,15 @@
       "source_id": "goguynet-naha",
       "source_name": "号外NET 那覇市",
       "collected_at": "2026-11-03T23:20:46+09:00",
-      "last_seen_at": "2026-11-04T00:10:06+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
         "発見"
       ],
       "topic": "催し・体験",
-      "region": "那覇市"
+      "region": "那覇市",
+      "publisher": "号外NET"
     },
     {
       "title": "【那覇市】10月31日、11月1日の2日間、沖縄県護國神社で「蚤の市」＆映画「二宮金次郎」上映会が開催されます！",
@@ -108,14 +160,15 @@
       "source_id": "goguynet-naha",
       "source_name": "号外NET 那覇市",
       "collected_at": "2026-11-03T23:20:46+09:00",
-      "last_seen_at": "2026-11-04T00:10:06+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
         "発見"
       ],
       "topic": "催し・体験",
-      "region": "那覇市"
+      "region": "那覇市",
+      "publisher": "号外NET"
     },
     {
       "title": "【那覇市】タコス・音楽・ルチャリブレ！那覇市泊緑地で「琉球メキシカンフェスタ2026」初開催されます！",
@@ -131,14 +184,15 @@
       "source_id": "goguynet-naha",
       "source_name": "号外NET 那覇市",
       "collected_at": "2026-11-03T23:20:46+09:00",
-      "last_seen_at": "2026-11-04T00:10:06+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
         "発見"
       ],
       "topic": "催し・体験",
-      "region": "那覇市"
+      "region": "那覇市",
+      "publisher": "号外NET"
     },
     {
       "title": "【那覇市】仮装コンテストやステージショーで盛り上がろう！「カフーナ旭橋ハロウィン2026」が10月30日に開催！",
@@ -154,14 +208,15 @@
       "source_id": "goguynet-naha",
       "source_name": "号外NET 那覇市",
       "collected_at": "2026-11-03T23:20:46+09:00",
-      "last_seen_at": "2026-11-04T00:10:06+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
         "発見"
       ],
       "topic": "催し・体験",
-      "region": "那覇市"
+      "region": "那覇市",
+      "publisher": "号外NET"
     },
     {
       "title": "【那覇市】「県民の台所」のエネルギーがあふれる「のうれんプラザ9周年感謝祭」が10月31日・11月1日に開催されます！",
@@ -177,14 +232,15 @@
       "source_id": "goguynet-naha",
       "source_name": "号外NET 那覇市",
       "collected_at": "2026-11-03T23:20:46+09:00",
-      "last_seen_at": "2026-11-04T00:10:06+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
         "発見"
       ],
       "topic": "催し・体験",
-      "region": "那覇市"
+      "region": "那覇市",
+      "publisher": "号外NET"
     },
     {
       "title": "【うるま市】石川運動公園で、11/8に元プロ野球選手・大嶺祐太さんのトークショーもある入場無料の「JOIN NOW2026」が開かれます。",
@@ -200,14 +256,15 @@
       "source_id": "goguynet-okinawa-uruma",
       "source_name": "号外NET 沖縄市・うるま市",
       "collected_at": "2026-11-03T23:20:46+09:00",
-      "last_seen_at": "2026-11-04T00:10:06+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
         "お得"
       ],
       "topic": "催し・体験",
-      "region": "うるま市"
+      "region": "うるま市",
+      "publisher": "号外NET"
     },
     {
       "title": "【那覇市】秋の恒例！「第21回 壺屋やちむん通り祭り 2026」が今週末10月31日に開催されます！",
@@ -230,7 +287,8 @@
         "発見"
       ],
       "topic": "催し・体験",
-      "region": "那覇市"
+      "region": "那覇市",
+      "publisher": "号外NET"
     },
     {
       "title": "【沖縄市】越来水辺公園周辺で、11/8に10の自治会が共催する「第19回 越来城下まつり」が開かれます。",
@@ -246,14 +304,15 @@
       "source_id": "goguynet-okinawa-uruma",
       "source_name": "号外NET 沖縄市・うるま市",
       "collected_at": "2026-11-03T23:20:46+09:00",
-      "last_seen_at": "2026-11-04T00:10:06+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
         "発見"
       ],
       "topic": "催し・体験",
-      "region": "沖縄市"
+      "region": "沖縄市",
+      "publisher": "号外NET"
     },
     {
       "title": "【南風原町】長期・マンスリー利用にぴったり！「JBレンタカー 沖縄南風原店」のお得な格安プランはいかがでしょうか！",
@@ -276,7 +335,8 @@
         "お得"
       ],
       "topic": "街・暮らし",
-      "region": "南風原町"
+      "region": "南風原町",
+      "publisher": "号外NET"
     },
     {
       "title": "【うるま市】イオン具志川店など5会場で、11/28・29に巡視船の特別公開もある「第22回うるま市産業まつり」が開かれます。",
@@ -292,14 +352,15 @@
       "source_id": "goguynet-okinawa-uruma",
       "source_name": "号外NET 沖縄市・うるま市",
       "collected_at": "2026-11-03T23:20:46+09:00",
-      "last_seen_at": "2026-11-04T00:10:06+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
         "発見"
       ],
       "topic": "催し・体験",
-      "region": "うるま市"
+      "region": "うるま市",
+      "publisher": "号外NET"
     },
     {
       "title": "【沖縄市】コザの築50年を超えるビルを再生した拠点「ROCX（ロックス）」が開設され、11/19にオープニングセレモニーが行われます。",
@@ -315,14 +376,15 @@
       "source_id": "goguynet-okinawa-uruma",
       "source_name": "号外NET 沖縄市・うるま市",
       "collected_at": "2026-11-03T23:20:46+09:00",
-      "last_seen_at": "2026-11-04T00:10:06+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
         "発見"
       ],
       "topic": "街・暮らし",
-      "region": "沖縄市"
+      "region": "沖縄市",
+      "publisher": "号外NET"
     },
     {
       "title": "【沖縄市】沖縄市農民研修センターグラウンドで、11/1に伝統芸能の披露がある「第14回美ら里まつり」が開かれます。",
@@ -338,14 +400,15 @@
       "source_id": "goguynet-okinawa-uruma",
       "source_name": "号外NET 沖縄市・うるま市",
       "collected_at": "2026-11-03T23:20:46+09:00",
-      "last_seen_at": "2026-11-04T00:10:06+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
         "発見"
       ],
       "topic": "催し・体験",
-      "region": "沖縄市"
+      "region": "沖縄市",
+      "publisher": "号外NET"
     },
     {
       "title": "【沖縄市】諸見里のコザ運動公園で、11/7に「キングスフリースローカップ」のある「KOZAスポーツフェス2026」が開かれます。",
@@ -360,14 +423,15 @@
       "source_id": "goguynet-okinawa-uruma",
       "source_name": "号外NET 沖縄市・うるま市",
       "collected_at": "2026-11-03T23:20:46+09:00",
-      "last_seen_at": "2026-11-04T00:10:06+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
         "発見"
       ],
       "topic": "催し・体験",
-      "region": "沖縄市"
+      "region": "沖縄市",
+      "publisher": "号外NET"
     },
     {
       "title": "【沖縄市】中央の「大衆焼肉(A)キンジテ コザ店」が、10/31で閉店します。",
@@ -383,14 +447,61 @@
       "source_id": "goguynet-okinawa-uruma",
       "source_name": "号外NET 沖縄市・うるま市",
       "collected_at": "2026-11-03T23:20:46+09:00",
-      "last_seen_at": "2026-11-04T00:10:06+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
         "発見"
       ],
       "topic": "街・暮らし",
+      "region": "沖縄市",
+      "publisher": "号外NET"
+    },
+    {
+      "title": "沖縄市・プラザハウスで「本ともっとバザール vol.9」10/10(土)〜12(月・祝) 開催",
+      "url": "https://hiija.net/book-more-bazaar/",
+      "published_at": "2026-10-06T18:31:45+09:00",
+      "source_categories": [
+        "沖縄イベント",
+        "沖縄市",
+        "沖縄本島中部"
+      ],
+      "id": "5f3ed75e994331151276",
+      "source_id": "hiija",
+      "source_name": "ジャブログ",
+      "publisher": "ジャブログ",
+      "collected_at": "2026-11-04T12:37:49+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
+      "provenance": "feed",
+      "timing": null,
+      "labels": [
+        "発見"
+      ],
+      "topic": "催し・体験",
       "region": "沖縄市"
+    },
+    {
+      "title": "【2027年1月】オキナワモーターショーが開催｜見どころ・駐車場・アクセス情報",
+      "url": "https://hiija.net/okinawa-motorshow-2/",
+      "published_at": "2026-09-19T19:01:52+09:00",
+      "source_categories": [
+        "沖縄イベント",
+        "沖縄市",
+        "沖縄本島中部"
+      ],
+      "id": "7552493143372e0b224a",
+      "source_id": "hiija",
+      "source_name": "ジャブログ",
+      "publisher": "ジャブログ",
+      "collected_at": "2026-11-04T12:37:49+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
+      "provenance": "feed",
+      "timing": null,
+      "labels": [
+        "発見"
+      ],
+      "topic": "催し・体験",
+      "region": null
     },
     {
       "title": "【沖縄市・うるま市】7日ごろまで大雨が続く可能性。あなたの家の浸水リスク、知っていますか？",
@@ -406,13 +517,152 @@
       "source_id": "goguynet-okinawa-uruma",
       "source_name": "号外NET 沖縄市・うるま市",
       "collected_at": "2026-11-03T23:20:46+09:00",
-      "last_seen_at": "2026-11-04T00:10:06+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
         "発見"
       ],
       "topic": "街・暮らし",
+      "region": "沖縄市",
+      "publisher": "号外NET"
+    },
+    {
+      "title": "漫画を読まなくても行きたくなる、北谷町「まんが喫茶 OHANA」の日替わりランチ",
+      "url": "https://hiija.net/ohana-202606/",
+      "published_at": "2026-06-19T22:32:33+09:00",
+      "source_categories": [
+        "北谷町",
+        "Foods",
+        "沖縄本島中部"
+      ],
+      "id": "e9bad927f435cb891536",
+      "source_id": "hiija",
+      "source_name": "ジャブログ",
+      "publisher": "ジャブログ",
+      "collected_at": "2026-11-04T12:37:49+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
+      "provenance": "feed",
+      "timing": null,
+      "labels": [
+        "発見"
+      ],
+      "topic": "グルメ",
+      "region": "北谷町"
+    },
+    {
+      "title": "沖縄市・プラザハウスで「本ともっとバザール vol.8」5/30(土)〜31(日) 開催",
+      "url": "https://hiija.net/book-more-bazaar202605/",
+      "published_at": "2026-05-29T06:30:00+09:00",
+      "source_categories": [
+        "沖縄イベント",
+        "沖縄市",
+        "沖縄本島中部"
+      ],
+      "id": "37b506ba8b12a3844170",
+      "source_id": "hiija",
+      "source_name": "ジャブログ",
+      "publisher": "ジャブログ",
+      "collected_at": "2026-11-04T12:37:49+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
+      "provenance": "feed",
+      "timing": null,
+      "labels": [
+        "発見"
+      ],
+      "topic": "催し・体験",
+      "region": "沖縄市"
+    },
+    {
+      "title": "北中城村「漫画喫茶・さんすうカフェ」でかぼちゃカレー。ライカム近くで落ち着けるランチ",
+      "url": "https://hiija.net/sansuucafe-202604/",
+      "published_at": "2026-04-30T22:00:00+09:00",
+      "source_categories": [
+        "北中城村",
+        "Foods",
+        "沖縄本島中部"
+      ],
+      "id": "3228c36649b97ecc349c",
+      "source_id": "hiija",
+      "source_name": "ジャブログ",
+      "publisher": "ジャブログ",
+      "collected_at": "2026-11-04T12:37:49+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
+      "provenance": "feed",
+      "timing": null,
+      "labels": [
+        "発見"
+      ],
+      "topic": "グルメ",
+      "region": "北中城村"
+    },
+    {
+      "title": "うるま市「大阪王将 具志川メインシティ店」でガーリック炒飯",
+      "url": "https://hiija.net/osakaohsho202603/",
+      "published_at": "2026-03-31T22:00:00+09:00",
+      "source_categories": [
+        "Foods",
+        "うるま市",
+        "沖縄本島中部"
+      ],
+      "id": "b118fd8c1618cd3642ca",
+      "source_id": "hiija",
+      "source_name": "ジャブログ",
+      "publisher": "ジャブログ",
+      "collected_at": "2026-11-04T12:37:49+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
+      "provenance": "feed",
+      "timing": null,
+      "labels": [
+        "発見"
+      ],
+      "topic": "グルメ",
+      "region": "うるま市"
+    },
+    {
+      "title": "北谷「コメダ珈琲」で昼コメプレート！ たまとまレタスサンド＆アイスコーヒー",
+      "url": "https://hiija.net/chatankomeda202603/",
+      "published_at": "2026-03-30T22:00:00+09:00",
+      "source_categories": [
+        "北谷町",
+        "Foods",
+        "沖縄本島中部"
+      ],
+      "id": "53a6675d725a7d4ed13b",
+      "source_id": "hiija",
+      "source_name": "ジャブログ",
+      "publisher": "ジャブログ",
+      "collected_at": "2026-11-04T12:37:49+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
+      "provenance": "feed",
+      "timing": null,
+      "labels": [
+        "発見"
+      ],
+      "topic": "グルメ",
+      "region": null
+    },
+    {
+      "title": "ランチとマンガを楽しみたい日に。沖縄市「まんが喫茶ブルーラビット」の日替わりランチをいただきました",
+      "url": "https://hiija.net/bluerabbit202603/",
+      "published_at": "2026-03-20T18:00:00+09:00",
+      "source_categories": [
+        "沖縄市",
+        "Foods",
+        "沖縄本島中部"
+      ],
+      "id": "c07f00e0314892277c55",
+      "source_id": "hiija",
+      "source_name": "ジャブログ",
+      "publisher": "ジャブログ",
+      "collected_at": "2026-11-04T12:37:49+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
+      "provenance": "feed",
+      "timing": null,
+      "labels": [
+        "発見"
+      ],
+      "topic": "グルメ",
       "region": "沖縄市"
     },
     {
@@ -429,7 +679,7 @@
       "source_id": "goguynet-okinawa-uruma",
       "source_name": "号外NET 沖縄市・うるま市",
       "collected_at": "2026-11-03T23:20:46+09:00",
-      "last_seen_at": "2026-11-04T00:10:06+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
       "provenance": "feed",
       "timing": {
         "start": "2026-01-25",
@@ -440,7 +690,8 @@
         "今だけ"
       ],
       "topic": "催し・体験",
-      "region": "うるま市"
+      "region": "うるま市",
+      "publisher": "号外NET"
     },
     {
       "title": "【沖縄市】応援が街の力になる。コザの街で育つマーケット「KSA ROOTS MARKET」が2026年1月25日（日）に開催されます。",
@@ -456,7 +707,7 @@
       "source_id": "goguynet-okinawa-uruma",
       "source_name": "号外NET 沖縄市・うるま市",
       "collected_at": "2026-11-03T23:20:46+09:00",
-      "last_seen_at": "2026-11-04T00:10:06+09:00",
+      "last_seen_at": "2026-11-04T12:37:49+09:00",
       "provenance": "feed",
       "timing": {
         "start": "2026-01-25",
@@ -467,7 +718,8 @@
         "今だけ"
       ],
       "topic": "催し・体験",
-      "region": "沖縄市"
+      "region": "沖縄市",
+      "publisher": "号外NET"
     }
   ]
 }
