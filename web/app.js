@@ -54,7 +54,7 @@ function cardFor({ article, state }) {
   const collected = element("time", `初回取得 ${dateLabel(article.collected_at)}`);
   if (article.collected_at) collected.dateTime = article.collected_at;
   source.append(collected);
-  card.append(meta, h3, source);
+  card.append(h3, meta, source);
   if (state.unverified) card.append(element("p", `${state.event ? "開催日" : "期限"}は未確認です。公開日・初回取得日は${state.event ? "開催日" : "期限"}を示しません。最新情報は元記事でご確認ください。`, "freshness"));
   if (article.timing) {
     const start = article.timing.start;
