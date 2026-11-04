@@ -31,6 +31,7 @@ jobs:
           PYTHON
       - run: python scripts/watch.py build --data work/live-articles.json --report work/live-report.json
       - run: node scripts/display-report.cjs work/live-articles.json > work/display-report.json
+      - run: python scripts/source_report.py --baseline-publisher '号外NET' --display-report work/display-report.json
       - run: python scripts/watch.py build --sample --output work/sample-site
       - uses: actions/upload-artifact@v4
         with:
@@ -40,4 +41,5 @@ jobs:
             work/sample-site
             work/live-report.json
             work/display-report.json
+            work/source-comparison.json
           retention-days: 14

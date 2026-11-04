@@ -1,0 +1,283 @@
+{
+  "checked_at": "2026-11-04T00:17:23+09:00",
+  "candidates": [
+    {
+      "source_id": "hiija",
+      "url": "https://hiija.net/feed/",
+      "status": "ok",
+      "robots_check": "allowed_by_collector",
+      "fetched": 10,
+      "categories": {
+        "兵庫県": 2,
+        "旅行": 2,
+        "サービスエリア": 1,
+        "そば": 1,
+        "沖縄イベント": 3,
+        "沖縄市": 4,
+        "沖縄本島中部": 8,
+        "中華": 1,
+        "姫路市": 1,
+        "北谷町": 2,
+        "Foods": 5,
+        "北中城村": 1,
+        "うるま市": 1
+      },
+      "articles": [
+        {
+          "title": "龍野西サービスエリア（上り）でランチ。新宮ネギたっぷりの豚しゃぶそば",
+          "url": "https://hiija.net/shingunegisoba/",
+          "published_at": "2026-10-06T19:30:00+09:00",
+          "source_categories": [
+            "兵庫県",
+            "旅行",
+            "サービスエリア",
+            "そば"
+          ]
+        },
+        {
+          "title": "沖縄市・プラザハウスで「本ともっとバザール vol.9」10/10(土)〜12(月・祝) 開催",
+          "url": "https://hiija.net/book-more-bazaar/",
+          "published_at": "2026-10-06T18:31:45+09:00",
+          "source_categories": [
+            "沖縄イベント",
+            "沖縄市",
+            "沖縄本島中部"
+          ]
+        },
+        {
+          "title": "【2027年1月】オキナワモーターショーが開催｜見どころ・駐車場・アクセス情報",
+          "url": "https://hiija.net/okinawa-motorshow-2/",
+          "published_at": "2026-09-19T19:01:52+09:00",
+          "source_categories": [
+            "沖縄イベント",
+            "沖縄市",
+            "沖縄本島中部"
+          ]
+        },
+        {
+          "title": "姫路「香港料理 吉祥華」でランチ｜エビチャーハンと上海小籠包を食べてきた",
+          "url": "https://hiija.net/himeji-kissyouka/",
+          "published_at": "2026-08-08T16:00:00+09:00",
+          "source_categories": [
+            "兵庫県",
+            "旅行",
+            "中華",
+            "姫路市"
+          ]
+        },
+        {
+          "title": "漫画を読まなくても行きたくなる、北谷町「まんが喫茶 OHANA」の日替わりランチ",
+          "url": "https://hiija.net/ohana-202606/",
+          "published_at": "2026-06-19T22:32:33+09:00",
+          "source_categories": [
+            "北谷町",
+            "Foods",
+            "沖縄本島中部"
+          ]
+        },
+        {
+          "title": "沖縄市・プラザハウスで「本ともっとバザール vol.8」5/30(土)〜31(日) 開催",
+          "url": "https://hiija.net/book-more-bazaar202605/",
+          "published_at": "2026-05-29T06:30:00+09:00",
+          "source_categories": [
+            "沖縄イベント",
+            "沖縄市",
+            "沖縄本島中部"
+          ]
+        },
+        {
+          "title": "北中城村「漫画喫茶・さんすうカフェ」でかぼちゃカレー。ライカム近くで落ち着けるランチ",
+          "url": "https://hiija.net/sansuucafe-202604/",
+          "published_at": "2026-04-30T22:00:00+09:00",
+          "source_categories": [
+            "北中城村",
+            "Foods",
+            "沖縄本島中部"
+          ]
+        },
+        {
+          "title": "うるま市「大阪王将 具志川メインシティ店」でガーリック炒飯",
+          "url": "https://hiija.net/osakaohsho202603/",
+          "published_at": "2026-03-31T22:00:00+09:00",
+          "source_categories": [
+            "Foods",
+            "うるま市",
+            "沖縄本島中部"
+          ]
+        },
+        {
+          "title": "北谷「コメダ珈琲」で昼コメプレート！ たまとまレタスサンド＆アイスコーヒー",
+          "url": "https://hiija.net/chatankomeda202603/",
+          "published_at": "2026-03-30T22:00:00+09:00",
+          "source_categories": [
+            "北谷町",
+            "Foods",
+            "沖縄本島中部"
+          ]
+        },
+        {
+          "title": "ランチとマンガを楽しみたい日に。沖縄市「まんが喫茶ブルーラビット」の日替わりランチをいただきました",
+          "url": "https://hiija.net/bluerabbit202603/",
+          "published_at": "2026-03-20T18:00:00+09:00",
+          "source_categories": [
+            "沖縄市",
+            "Foods",
+            "沖縄本島中部"
+          ]
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://hiija.net/robots.txt",
+          "status": "retrieved",
+          "bytes": 28
+        },
+        {
+          "url": "https://hiija.net/feed/",
+          "status": "retrieved",
+          "bytes": 10689
+        }
+      ]
+    },
+    {
+      "source_id": "okinawa-iju",
+      "url": "https://okinawa-iju.info/feed/",
+      "status": "ok",
+      "robots_check": "allowed_by_collector",
+      "fetched": 10,
+      "categories": {
+        "昆虫": 8,
+        "広告含む": 2,
+        "マンガ昆虫画日記": 7,
+        "ホテル": 1,
+        "ホテル・リゾート": 1,
+        "沖縄暮らし": 1,
+        "沖縄の食べ物": 1
+      },
+      "articles": [
+        {
+          "title": "カブトムシ・クワガタ飼育に100均の昆虫ゼリーってどうなの？",
+          "url": "https://okinawa-iju.info/insect-jelly-100kin",
+          "published_at": "2026-10-22T10:46:46+09:00",
+          "source_categories": [
+            "昆虫",
+            "広告含む"
+          ]
+        },
+        {
+          "title": "【昆虫画日記】ミンミンゼミの抜け殻ってどう見分けるの？",
+          "url": "https://okinawa-iju.info/manga-hyalessa-maculaticollis",
+          "published_at": "2026-10-06T16:08:32+09:00",
+          "source_categories": [
+            "昆虫",
+            "マンガ昆虫画日記"
+          ]
+        },
+        {
+          "title": "【昆虫画日記】夏の特別なイベント",
+          "url": "https://okinawa-iju.info/manga-graptopsaltria-nigrofuscata",
+          "published_at": "2026-10-06T13:50:56+09:00",
+          "source_categories": [
+            "昆虫",
+            "マンガ昆虫画日記"
+          ]
+        },
+        {
+          "title": "【昆虫画日記】なんか夏になるといるキレイなやつ",
+          "url": "https://okinawa-iju.info/manga-geisha-distinctissima",
+          "published_at": "2026-10-01T13:48:00+09:00",
+          "source_categories": [
+            "昆虫",
+            "マンガ昆虫画日記"
+          ]
+        },
+        {
+          "title": "【昆虫画日記】場所によって色がちがうカナブン",
+          "url": "https://okinawa-iju.info/manga-rhomborrhina-japonica",
+          "published_at": "2026-09-24T16:07:35+09:00",
+          "source_categories": [
+            "昆虫",
+            "マンガ昆虫画日記"
+          ]
+        },
+        {
+          "title": "【昆虫画日記】たぶん、じいじも好きなんだと思う",
+          "url": "https://okinawa-iju.info/manga-lucanus-maculifemoratus",
+          "published_at": "2026-09-17T16:00:32+09:00",
+          "source_categories": [
+            "昆虫",
+            "マンガ昆虫画日記"
+          ]
+        },
+        {
+          "title": "【リピート】ホテル モントレのプール＆ランチへ再びいってきました",
+          "url": "https://okinawa-iju.info/hotel-monterey-pool-repeat",
+          "published_at": "2026-09-10T11:55:25+09:00",
+          "source_categories": [
+            "ホテル",
+            "ホテル・リゾート",
+            "広告含む"
+          ]
+        },
+        {
+          "title": "沖縄の魚タマンをバター焼きで食べたらめちゃウマ！",
+          "url": "https://okinawa-iju.info/taman-fish-panfry",
+          "published_at": "2026-09-08T16:23:31+09:00",
+          "source_categories": [
+            "沖縄暮らし",
+            "沖縄の食べ物"
+          ]
+        },
+        {
+          "title": "【昆虫画日記】これがまた意外と跳ぶんよね",
+          "url": "https://okinawa-iju.info/manga-acrida-cinerea",
+          "published_at": "2026-09-07T20:28:12+09:00",
+          "source_categories": [
+            "昆虫",
+            "マンガ昆虫画日記"
+          ]
+        },
+        {
+          "title": "【昆虫画日記】クワガタみたいでいいと思います！",
+          "url": "https://okinawa-iju.info/manga-scarites-terricola-pacifica",
+          "published_at": "2026-09-04T21:23:30+09:00",
+          "source_categories": [
+            "昆虫",
+            "マンガ昆虫画日記"
+          ]
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://okinawa-iju.info/robots.txt",
+          "status": "retrieved",
+          "bytes": 131
+        },
+        {
+          "url": "https://okinawa-iju.info/feed/",
+          "status": "retrieved",
+          "bytes": 18383
+        }
+      ]
+    },
+    {
+      "source_id": "dee-okinawa",
+      "url": "https://www.dee-okinawa.com/index.xml",
+      "status": "failed",
+      "error": "ValueError",
+      "reason": "xml_dtd_forbidden",
+      "requests": [
+        {
+          "url": "https://www.dee-okinawa.com/robots.txt",
+          "status": "retrieved",
+          "bytes": 24
+        },
+        {
+          "url": "https://www.dee-okinawa.com/index.xml",
+          "status": "retrieved",
+          "bytes": 8419
+        }
+      ]
+    }
+  ]
+}

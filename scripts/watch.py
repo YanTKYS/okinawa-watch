@@ -76,7 +76,7 @@ def domain_match(url, domain):
     return bool(domain) and (host == domain or host.endswith("." + domain))
 
 
-def exclusion(article, rules):
+def exclusion(article, rules, source=None):
     for domain in rules["exclude_domains"]:
         if domain_match(article["url"], domain):
             return "domain:" + domain
@@ -88,6 +88,13 @@ def exclusion(article, rules):
     for category in rules["exclude_categories"]:
         if normalized(category) in categories:
             return "category:" + category
+    if source:
+        for category in source.get("exclude_categories", []):
+            if normalized(category) in categories:
+                return "source_category:" + category
+        included = source.get("include_categories", [])
+        if included and not any(normalized(c) in categories for c in included):
+            return "source_category:not_included"
     return None
 
 
@@ -270,6 +277,7 @@ def collect(sources, rules, previous, now=None, fetcher=None):
     articles = {}
     events = []
     stats = []
+    by_id = {source["id"]: source for source in sources}
 
     def log(source_id, reason, item):
         events.append({"source_id": source_id, "reason": reason,
@@ -278,14 +286,18 @@ def collect(sources, rules, previous, now=None, fetcher=None):
     for old in previous.get("articles", []):
         old = dict(old)
         old["url"] = canonical_url(old["url"])
-        reason = exclusion(old, rules)
+        source = by_id.get(old["source_id"])
+        if source:
+            old["publisher"] = source.get("publisher", source["name"])
+        reason = exclusion(old, rules, source)
         if reason:
             log(old["source_id"], "existing:" + reason, old)
         elif date.fromisoformat(old["collected_at"][:10]) >= now.date() - timedelta(days=rules["retention_days"]):
             articles[old["url"]] = classify(old, rules)
 
     for source in sources:
-        stat = {"source_id": source["id"], "name": source["name"], "fetched": 0,
+        stat = {"source_id": source["id"], "name": source["name"],
+                "publisher": source.get("publisher", source["name"]), "fetched": 0,
                 "accepted": 0, "new": 0, "duplicate": 0, "excluded": {}, "status": "disabled"}
         stats.append(stat)
         if not source.get("enabled"):
@@ -307,7 +319,7 @@ def collect(sources, rules, previous, now=None, fetcher=None):
                 item["url"] = canonical_url(item["url"])
                 if not item["title"]:
                     raise ValueError("missing_title")
-                reason = exclusion(item, rules)
+                reason = exclusion(item, rules, source)
             except ValueError as error:
                 reason = str(error)
             if reason:
@@ -328,7 +340,8 @@ def collect(sources, rules, previous, now=None, fetcher=None):
                 existing["last_seen_at"] = stamp
                 continue
             item.update(id=hashlib.sha256(url.encode()).hexdigest()[:20], source_id=source["id"],
-                        source_name=source["name"], collected_at=stamp, last_seen_at=stamp,
+                        source_name=source["name"], publisher=source.get("publisher", source["name"]),
+                        collected_at=stamp, last_seen_at=stamp,
                         provenance="feed")
             articles[url] = classify(item, rules)
             stat["new"] += 1
@@ -337,7 +350,9 @@ def collect(sources, rules, previous, now=None, fetcher=None):
     ordered = sorted(articles.values(), key=lambda a: (a.get("published_at") or a["collected_at"], a["url"]), reverse=True)
     document = {"schema_version": 1, "updated_at": stamp, "articles": ordered[:rules["max_articles"]]}
     report = {"collected_at": stamp, "sources": stats, "total_articles": len(document["articles"]),
-              "topics": dict(Counter(a["topic"] for a in document["articles"])), "exclusions": events}
+              "topics": dict(Counter(a["topic"] for a in document["articles"])),
+              "publishers": dict(Counter(a.get("publisher", a["source_name"]) for a in document["articles"])),
+              "exclusions": events}
     return document, report
 
 
@@ -386,7 +401,7 @@ def main():
         save(args.report, report)
         for stat in report["sources"]:
             print(json.dumps(stat, ensure_ascii=False))
-        print(json.dumps({"total_articles": report["total_articles"], "topics": report["topics"]}, ensure_ascii=False))
+        print(json.dumps({"total_articles": report["total_articles"], "topics": report["topics"], "publishers": report["publishers"]}, ensure_ascii=False))
         active = [s for s in report["sources"] if s["status"] != "disabled"]
         if not active or all(s["status"] != "ok" for s in active):
             print("WARNING: no source succeeded; previous data retained. See collection-report.json.")

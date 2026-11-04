@@ -1,0 +1,270 @@
+{
+  "collected_at": "2026-11-04T00:20:19+09:00",
+  "baseline_publishers": [
+    "号外NET"
+  ],
+  "before": {
+    "total": 20,
+    "publisher_count": 1,
+    "publishers": {
+      "号外NET": {
+        "count": 20,
+        "percent": 100.0
+      }
+    },
+    "topics": {
+      "催し・体験": {
+        "count": 16,
+        "percent": 80.0
+      },
+      "街・暮らし": {
+        "count": 4,
+        "percent": 20.0
+      }
+    },
+    "event_percent": 80.0,
+    "food_percent": 0.0,
+    "largest_publisher_percent": 100.0
+  },
+  "after": {
+    "total": 28,
+    "publisher_count": 2,
+    "publishers": {
+      "ジャブログ": {
+        "count": 8,
+        "percent": 28.6
+      },
+      "号外NET": {
+        "count": 20,
+        "percent": 71.4
+      }
+    },
+    "topics": {
+      "グルメ": {
+        "count": 5,
+        "percent": 17.9
+      },
+      "催し・体験": {
+        "count": 19,
+        "percent": 67.9
+      },
+      "街・暮らし": {
+        "count": 4,
+        "percent": 14.3
+      }
+    },
+    "event_percent": 67.9,
+    "food_percent": 17.9,
+    "largest_publisher_percent": 71.4
+  },
+  "source_results": [
+    {
+      "source_id": "goguynet-naha",
+      "name": "号外NET 那覇市",
+      "publisher": "号外NET",
+      "fetched": 10,
+      "accepted": 10,
+      "new": 10,
+      "duplicate": 0,
+      "excluded": {},
+      "status": "ok",
+      "unprocessed": 0
+    },
+    {
+      "source_id": "goguynet-okinawa-uruma",
+      "name": "号外NET 沖縄市・うるま市",
+      "publisher": "号外NET",
+      "fetched": 10,
+      "accepted": 10,
+      "new": 10,
+      "duplicate": 0,
+      "excluded": {},
+      "status": "ok",
+      "unprocessed": 0
+    },
+    {
+      "source_id": "dee-okinawa",
+      "name": "DEEokinawa",
+      "publisher": "DEEokinawa",
+      "fetched": 0,
+      "accepted": 0,
+      "new": 0,
+      "duplicate": 0,
+      "excluded": {},
+      "status": "disabled",
+      "reason": "2026-11-04 Actions run 41662244605でrobots取得は成功したが、設定中の /index.xml はDTDを含む応答でRSS解析を拒否（xml_dtd_forbidden）。公開RSSを確認できず無効を維持。本文・画像の無断転載禁止も確認。"
+    },
+    {
+      "source_id": "mypl-naha",
+      "name": "まいぷれ 那覇・浦添・豊見城",
+      "publisher": "まいぷれ 那覇・浦添・豊見城",
+      "fetched": 0,
+      "accepted": 0,
+      "new": 0,
+      "duplicate": 0,
+      "excluded": {},
+      "status": "disabled",
+      "reason": "店舗・生活情報など多分野を確認。RSS・robots・利用条件の確認未了。HTML取得は保留。"
+    },
+    {
+      "source_id": "tabearuki",
+      "name": "沖縄食べ歩きアンテナ",
+      "publisher": "沖縄食べ歩きアンテナ",
+      "fetched": 0,
+      "accepted": 0,
+      "new": 0,
+      "duplicate": 0,
+      "excluded": {},
+      "status": "disabled",
+      "reason": "グルメ中心の外部ブログ集約サイト。RSS・robots・自動取得条件が未確認で、グルメ偏重も避けるため初期収集には不採用。"
+    },
+    {
+      "source_id": "hiija",
+      "name": "ジャブログ",
+      "publisher": "ジャブログ",
+      "fetched": 10,
+      "accepted": 8,
+      "new": 8,
+      "duplicate": 0,
+      "excluded": {
+        "source_category:兵庫県": 2
+      },
+      "status": "ok",
+      "unprocessed": 0
+    },
+    {
+      "source_id": "okinawa-iju",
+      "name": "沖縄移住ライフハック",
+      "publisher": "沖縄移住ライフハック",
+      "fetched": 0,
+      "accepted": 0,
+      "new": 0,
+      "duplicate": 0,
+      "excluded": {},
+      "status": "disabled",
+      "reason": "自然・暮らしの分野は適合するが、著作権・免責事項に商用非商用を問わず転載・改編・再配布禁止とある。RSS見出しの公開一覧への再掲載条件は未確認のため、技術的取得成功と区別して定期収集は無効。"
+    }
+  ],
+  "samples": [
+    {
+      "publisher": "ジャブログ",
+      "source_id": "hiija",
+      "title": "沖縄市・プラザハウスで「本ともっとバザール vol.9」10/10(土)〜12(月・祝) 開催",
+      "url": "https://hiija.net/book-more-bazaar/",
+      "topic": "催し・体験",
+      "published_at": "2026-10-06T18:31:45+09:00"
+    },
+    {
+      "publisher": "ジャブログ",
+      "source_id": "hiija",
+      "title": "【2027年1月】オキナワモーターショーが開催｜見どころ・駐車場・アクセス情報",
+      "url": "https://hiija.net/okinawa-motorshow-2/",
+      "topic": "催し・体験",
+      "published_at": "2026-09-19T19:01:52+09:00"
+    },
+    {
+      "publisher": "ジャブログ",
+      "source_id": "hiija",
+      "title": "漫画を読まなくても行きたくなる、北谷町「まんが喫茶 OHANA」の日替わりランチ",
+      "url": "https://hiija.net/ohana-202606/",
+      "topic": "グルメ",
+      "published_at": "2026-06-19T22:32:33+09:00"
+    },
+    {
+      "publisher": "ジャブログ",
+      "source_id": "hiija",
+      "title": "沖縄市・プラザハウスで「本ともっとバザール vol.8」5/30(土)〜31(日) 開催",
+      "url": "https://hiija.net/book-more-bazaar202605/",
+      "topic": "催し・体験",
+      "published_at": "2026-05-29T06:30:00+09:00"
+    },
+    {
+      "publisher": "ジャブログ",
+      "source_id": "hiija",
+      "title": "北中城村「漫画喫茶・さんすうカフェ」でかぼちゃカレー。ライカム近くで落ち着けるランチ",
+      "url": "https://hiija.net/sansuucafe-202604/",
+      "topic": "グルメ",
+      "published_at": "2026-04-30T22:00:00+09:00"
+    },
+    {
+      "publisher": "ジャブログ",
+      "source_id": "hiija",
+      "title": "うるま市「大阪王将 具志川メインシティ店」でガーリック炒飯",
+      "url": "https://hiija.net/osakaohsho202603/",
+      "topic": "グルメ",
+      "published_at": "2026-03-31T22:00:00+09:00"
+    },
+    {
+      "publisher": "ジャブログ",
+      "source_id": "hiija",
+      "title": "北谷「コメダ珈琲」で昼コメプレート！ たまとまレタスサンド＆アイスコーヒー",
+      "url": "https://hiija.net/chatankomeda202603/",
+      "topic": "グルメ",
+      "published_at": "2026-03-30T22:00:00+09:00"
+    },
+    {
+      "publisher": "ジャブログ",
+      "source_id": "hiija",
+      "title": "ランチとマンガを楽しみたい日に。沖縄市「まんが喫茶ブルーラビット」の日替わりランチをいただきました",
+      "url": "https://hiija.net/bluerabbit202603/",
+      "topic": "グルメ",
+      "published_at": "2026-03-20T18:00:00+09:00"
+    }
+  ],
+  "display_evaluated_on_jst": "2026-11-04",
+  "visible_before": {
+    "total": 17,
+    "publisher_count": 1,
+    "publishers": {
+      "号外NET": {
+        "count": 17,
+        "percent": 100.0
+      }
+    },
+    "topics": {
+      "催し・体験": {
+        "count": 14,
+        "percent": 82.4
+      },
+      "街・暮らし": {
+        "count": 3,
+        "percent": 17.6
+      }
+    },
+    "event_percent": 82.4,
+    "food_percent": 0.0,
+    "largest_publisher_percent": 100.0
+  },
+  "visible_after": {
+    "total": 22,
+    "publisher_count": 2,
+    "publishers": {
+      "ジャブログ": {
+        "count": 5,
+        "percent": 22.7
+      },
+      "号外NET": {
+        "count": 17,
+        "percent": 77.3
+      }
+    },
+    "topics": {
+      "グルメ": {
+        "count": 5,
+        "percent": 22.7
+      },
+      "催し・体験": {
+        "count": 14,
+        "percent": 63.6
+      },
+      "街・暮らし": {
+        "count": 3,
+        "percent": 13.6
+      }
+    },
+    "event_percent": 63.6,
+    "food_percent": 22.7,
+    "largest_publisher_percent": 77.3
+  },
+  "workflow_run": "https://github.com/YanTKYS/okinawa-watch/actions/runs/41662811155"
+}

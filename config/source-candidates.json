@@ -1,0 +1,48 @@
+{
+  "candidates": [
+    {
+      "id": "hiija",
+      "name": "ジャブログ",
+      "url": "https://hiija.net/feed/",
+      "method": "feed",
+      "max_items": 10
+    },
+    {
+      "id": "okinawa-iju",
+      "name": "沖縄移住ライフハック",
+      "url": "https://okinawa-iju.info/feed/",
+      "method": "feed",
+      "max_items": 10,
+      "skip_reason": "公開一覧へのRSS見出し再掲載条件が未確認。2026-11-04の技術実測ログを参照し、再検証の際は条件を先に確認する。"
+    },
+    {
+      "id": "dee-okinawa",
+      "name": "DEEokinawa",
+      "url": "https://www.dee-okinawa.com/index.xml",
+      "method": "feed",
+      "max_items": 10,
+      "skip_reason": "2026-11-04の実測で現URLをRSSとして解析できず。公開RSSのURL確認まで再試行しない。"
+    },
+    {
+      "id": "okinawa-zoo",
+      "name": "沖縄こどもの国",
+      "url": "https://www.okzm.jp/feed/",
+      "method": "feed",
+      "skip_reason": "RSS応答形式と免責事項をWeb調査で確認。無断コンテンツ使用禁止の記載があり、RSS見出しの一覧掲載条件を整理するまで採用・実収集は保留。"
+    },
+    {
+      "id": "urara-books",
+      "name": "市場の古本屋ウララ",
+      "url": "https://urarabooks.ti-da.net/",
+      "method": "unverified",
+      "skip_reason": "店舗の通販ABOUTからブログを確認したがWeb取得は403。RSS URL・robots・利用条件を確認できず、取得を迂回せず保留。"
+    },
+    {
+      "id": "feliz",
+      "name": "feliz",
+      "url": "https://www.feliz-style.jp/",
+      "method": "unverified",
+      "skip_reason": "公式リンク集のリンクフリー方針を確認。ブログへのリンクはあるがRSS URL・robots未確認で、HTML自動取得は行わず保留。"
+    }
+  ]
+}
