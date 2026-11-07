@@ -2,8 +2,12 @@
 let articles = [];
 let policy;
 let filter = "すべて";
+let renderedDay = null;
 const $ = (id) => document.getElementById(id);
 const display = OkinawaDisplay;
+const FILTERS = ["すべて", "今だけ", "お得", "発見", "催し（日付未確認）"];
+const LOG_URL = "https://github.com/YanTKYS/okinawa-watch/actions/workflows/collect.yml";
+const todayJST = () => display.day(new Date().toISOString());
 function dateLabel(value) {
   const day = display.day(value);
   return day ? day.replaceAll("-", "/") : "未確認";
@@ -67,12 +71,47 @@ function cardFor({ article, state }) {
   li.append(card);
   return li;
 }
+function setFilter(value) {
+  filter = FILTERS.includes(value) ? value : "すべて";
+  document.querySelectorAll("[data-filter]").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.filter === filter)));
+}
 function selectFilter(value) {
-  filter = value;
-  document.querySelectorAll("[data-filter]").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.filter === value)));
+  setFilter(value);
   render();
+  saveURL();
+}
+// 分類・分野・過去情報のチェックをURLに保存し、再読み込み・共有・戻る/進むで同じ一覧を開けるようにする。
+function urlFor() {
+  const params = new URLSearchParams();
+  if (filter !== "すべて") params.set("filter", filter);
+  if ($("topic").value) params.set("topic", $("topic").value);
+  if ($("expired").checked) params.set("ended", "1");
+  if ($("older").checked) params.set("older", "1");
+  const query = params.toString();
+  return location.pathname + (query ? `?${query}` : "") + location.hash;
+}
+function saveURL() {
+  const url = urlFor();
+  if (url !== location.pathname + location.search + location.hash) history.pushState(null, "", url);
+}
+function readURL() {
+  const params = new URLSearchParams(location.search);
+  setFilter(params.get("filter") || "すべて");
+  const topic = params.get("topic") || "";
+  $("topic").value = [...$("topic").options].some(o => o.value === topic) ? topic : "";
+  $("expired").checked = params.get("ended") === "1";
+  $("older").checked = params.get("older") === "1";
+}
+// 元記事から戻ったとき、移動前の位置と記事リンクへ戻す（ブラウザが画面を保持していない場合）。
+function restoreReading() {
+  const saved = history.state;
+  if (!saved || typeof saved.scroll !== "number") return;
+  window.scrollTo(0, saved.scroll);
+  const link = [...document.querySelectorAll("#articles h3 a")].find(a => a.href === saved.article);
+  if (link) link.focus({ preventScroll: true });
 }
 function render() {
+  renderedDay = todayJST();
   const entries = display.entries(articles, policy);
   const visible = entries.filter(entry => display.visible(entry, {
     filter, topic: $("topic").value, includeEnded: $("expired").checked, includeOlder: $("older").checked
@@ -86,7 +125,14 @@ function render() {
   $("filter-help").textContent = filter === "催し（日付未確認）"
     ? `開催日は未確認の催しです。通常は公開日（不明なら初回取得日）から${policy.unverified_max_age_days}日以内を表示します。開催中を保証しません。`
     : "「今だけ」は日付確認済み。「催し（日付未確認）」では、年などを補わずに掲載の新しい催しを探せます。";
+  // 再描画で記事リンクのフォーカスを失わないよう、同じ記事が残っていればそこへ戻す。
+  const focused = document.activeElement?.closest?.("#articles li") ? document.activeElement.href : null;
   $("articles").replaceChildren(...visible.map(cardFor).filter(Boolean));
+  if (focused) {
+    const link = [...document.querySelectorAll("#articles h3 a")].find(a => a.href === focused);
+    if (link) link.focus({ preventScroll: true });
+    else $("results").focus({ preventScroll: true }); // 対象が非表示になった場合は一覧の先頭へ
+  }
   const hidden = entries.filter(entry => entry.state.hidden_reason);
   $("visibility-summary").textContent = `通常表示から外す情報・理由（${hidden.length}件）`;
   $("visibility-log").replaceChildren(...hidden.map(({ article, state }) => {
@@ -115,17 +161,33 @@ async function init() {
     });
     document.querySelectorAll("[data-filter]").forEach(button => button.addEventListener("click", () => selectFilter(button.dataset.filter)));
     $("empty-events").addEventListener("click", () => { $("topic").value = ""; selectFilter("催し（日付未確認）"); });
-    ["topic", "expired", "older"].forEach(id => $(id).addEventListener("change", render));
+    ["topic", "expired", "older"].forEach(id => $(id).addEventListener("change", () => { render(); saveURL(); }));
+    $("articles").addEventListener("click", event => {
+      const link = event.target.closest("h3 a");
+      if (link) history.replaceState({ scroll: window.scrollY, article: link.href }, "", location.href);
+    });
+    window.addEventListener("popstate", () => { readURL(); render(); restoreReading(); });
+    readURL();
+    history.replaceState(history.state, "", urlFor()); // 不正な条件はURLからも外す
     render();
-    setInterval(render, 60_000);
+    restoreReading();
+    // 終了日・鮮度は日本時間の日付で決まるため、日付が変わったときだけ一覧を作り直す。
+    setInterval(() => { if (todayJST() !== renderedDay) render(); }, 60_000);
     try {
       const statusResponse = await fetch("status.json", { cache: "no-store" });
       if (statusResponse.ok) {
         const status = await statusResponse.json();
-        const failed = status.sources?.filter(s => ["failed", "blocked"].includes(s.status)) || [];
+        const active = status.sources?.filter(s => s.status !== "disabled") || [];
+        const failed = active.filter(s => ["failed", "blocked"].includes(s.status));
         if (failed.length && !data.sample_mode) {
+          const names = failed.map(s => s.name || s.publisher || s.source_id).join("、");
+          const message = failed.length === active.length
+            ? `すべての情報源（${names}）を今回取得できませんでした。以前の収集結果を表示しています。`
+            : `一部の情報源（${names}）を今回取得できませんでした。ほかの情報源は今回の収集で更新しています。取得できなかった情報源の記事は、以前に収集したものがあれば表示しています。`;
+          const link = element("a", "収集の実行記録（GitHub Actions）");
+          link.href = LOG_URL;
           $("notice").hidden = false;
-          $("notice").textContent = `${failed.length}件の情報源を取得できませんでした。以前の収集結果を表示しています。詳しくは取得ログをご確認ください。`;
+          $("notice").replaceChildren(document.createTextNode(message + " 詳しくは"), link, document.createTextNode("をご確認ください。"));
         }
       }
     } catch { /* Articles remain usable if status is unavailable. */ }
