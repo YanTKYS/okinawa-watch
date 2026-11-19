@@ -1,7 +1,55 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-19T05:40:44+09:00",
+  "updated_at": "2026-11-19T16:37:49+09:00",
   "articles": [
+    {
+      "title": "【うるま市】12/19・20は石川多目的ドームで大相撲の冬巡業「うるま場所」、横綱・大関も参加予定",
+      "url": "https://okinawa-uruma.goguynet.jp/2026/11/19/sumo-uruma-basho/",
+      "published_at": "2026-11-19T14:15:00+09:00",
+      "source_categories": [
+        "イベント",
+        "大相撲うるま場所",
+        "石川",
+        "石川多目的ドーム"
+      ],
+      "id": "ff0e97cdfad7642a5cf9",
+      "source_id": "goguynet-okinawa-uruma",
+      "source_name": "号外NET 沖縄市・うるま市",
+      "publisher": "号外NET",
+      "collected_at": "2026-11-19T16:37:49+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
+      "provenance": "feed",
+      "timing": null,
+      "labels": [
+        "発見"
+      ],
+      "topic": "催し・体験",
+      "region": "うるま市"
+    },
+    {
+      "title": "【那覇市】世界トップレベルの戦いが間近に！「日米対抗ソフトボール2026」第2戦・第3戦が沖縄セルラースタジアム那覇で開催されます。",
+      "url": "https://naha.goguynet.jp/2026/11/19/softball/",
+      "published_at": "2026-11-19T06:36:15+09:00",
+      "source_categories": [
+        "イベント",
+        "ソフトボール",
+        "日米対抗",
+        "沖縄セルラースタジアム那覇"
+      ],
+      "id": "36e9064ee00c9625472a",
+      "source_id": "goguynet-naha",
+      "source_name": "号外NET 那覇市",
+      "publisher": "号外NET",
+      "collected_at": "2026-11-19T16:37:49+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
+      "provenance": "feed",
+      "timing": null,
+      "labels": [
+        "発見"
+      ],
+      "topic": "催し・体験",
+      "region": "那覇市"
+    },
     {
       "title": "【沖縄市】沖縄こどもの国で12/19〜31「クリスマスファンタジー」、大みそかはカウントダウン花火も",
       "url": "https://okinawa-uruma.goguynet.jp/2026/11/18/christmas-fantasy/",
@@ -17,7 +65,7 @@
       "source_name": "号外NET 沖縄市・うるま市",
       "publisher": "号外NET",
       "collected_at": "2026-11-19T05:40:44+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -41,7 +89,7 @@
       "source_name": "号外NET 那覇市",
       "publisher": "号外NET",
       "collected_at": "2026-11-18T16:41:23+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -65,7 +113,7 @@
       "source_name": "号外NET 沖縄市・うるま市",
       "publisher": "号外NET",
       "collected_at": "2026-11-17T17:06:05+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -89,7 +137,7 @@
       "source_name": "号外NET 那覇市",
       "publisher": "号外NET",
       "collected_at": "2026-11-17T07:17:42+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -113,7 +161,7 @@
       "source_name": "号外NET 那覇市",
       "publisher": "号外NET",
       "collected_at": "2026-11-16T15:45:44+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -137,7 +185,7 @@
       "source_name": "号外NET 沖縄市・うるま市",
       "publisher": "号外NET",
       "collected_at": "2026-11-15T15:47:23+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -161,7 +209,7 @@
       "source_name": "号外NET 那覇市",
       "publisher": "号外NET",
       "collected_at": "2026-11-15T15:47:23+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -185,7 +233,7 @@
       "source_name": "号外NET 那覇市",
       "publisher": "号外NET",
       "collected_at": "2026-11-14T15:42:10+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -209,7 +257,7 @@
       "source_name": "号外NET 沖縄市・うるま市",
       "publisher": "号外NET",
       "collected_at": "2026-11-13T15:55:41+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -233,7 +281,7 @@
       "source_name": "号外NET 那覇市",
       "publisher": "号外NET",
       "collected_at": "2026-11-13T15:55:41+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -257,7 +305,7 @@
       "source_name": "号外NET 沖縄市・うるま市",
       "publisher": "号外NET",
       "collected_at": "2026-11-12T16:24:13+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -281,7 +329,7 @@
       "source_name": "号外NET 那覇市",
       "publisher": "号外NET",
       "collected_at": "2026-11-12T16:24:13+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -305,7 +353,7 @@
       "source_name": "号外NET 沖縄市・うるま市",
       "publisher": "号外NET",
       "collected_at": "2026-11-11T15:43:45+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -329,7 +377,7 @@
       "source_name": "号外NET 那覇市",
       "publisher": "号外NET",
       "collected_at": "2026-11-11T15:43:45+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -353,7 +401,7 @@
       "source_name": "号外NET 沖縄市・うるま市",
       "publisher": "号外NET",
       "collected_at": "2026-11-11T04:51:12+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -377,7 +425,7 @@
       "source_name": "号外NET 那覇市",
       "publisher": "号外NET",
       "collected_at": "2026-11-10T07:29:40+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -473,7 +521,7 @@
       "source_name": "号外NET 沖縄市・うるま市",
       "publisher": "号外NET",
       "collected_at": "2026-11-07T04:31:12+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -784,7 +832,7 @@
       "source_id": "goguynet-okinawa-uruma",
       "source_name": "号外NET 沖縄市・うるま市",
       "collected_at": "2026-11-03T23:20:46+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -999,7 +1047,7 @@
       "source_name": "ジャブログ",
       "publisher": "ジャブログ",
       "collected_at": "2026-11-04T12:37:49+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -1022,7 +1070,7 @@
       "source_name": "ジャブログ",
       "publisher": "ジャブログ",
       "collected_at": "2026-11-04T12:37:49+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -1069,7 +1117,7 @@
       "source_name": "ジャブログ",
       "publisher": "ジャブログ",
       "collected_at": "2026-11-04T12:37:49+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -1092,7 +1140,7 @@
       "source_name": "ジャブログ",
       "publisher": "ジャブログ",
       "collected_at": "2026-11-04T12:37:49+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -1115,7 +1163,7 @@
       "source_name": "ジャブログ",
       "publisher": "ジャブログ",
       "collected_at": "2026-11-04T12:37:49+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -1138,7 +1186,7 @@
       "source_name": "ジャブログ",
       "publisher": "ジャブログ",
       "collected_at": "2026-11-04T12:37:49+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -1161,7 +1209,7 @@
       "source_name": "ジャブログ",
       "publisher": "ジャブログ",
       "collected_at": "2026-11-04T12:37:49+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
@@ -1184,7 +1232,7 @@
       "source_name": "ジャブログ",
       "publisher": "ジャブログ",
       "collected_at": "2026-11-04T12:37:49+09:00",
-      "last_seen_at": "2026-11-19T05:40:44+09:00",
+      "last_seen_at": "2026-11-19T16:37:49+09:00",
       "provenance": "feed",
       "timing": null,
       "labels": [
