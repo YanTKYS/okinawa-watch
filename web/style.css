@@ -238,6 +238,12 @@ article h3 a:hover { color: var(--reading-link); }
   padding: 0 5px;
   line-height: 1.45;
 }
+.article-status {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 6px;
+  font-size: .82rem;
+}
 .tag.deal { font-weight: 700; }
 .tag.unverified { border-style: dashed; color: #583913; }
 .tag.verified { border-color: #788a9b; }

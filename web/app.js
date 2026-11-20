@@ -53,6 +53,10 @@ function cardFor({ article, state }) {
   mark.setAttribute("aria-hidden", "true");
   link.append(mark);
   h3.append(link);
+  card.append(h3);
+  if (states[state.status]) {
+    card.append(element("p", states[state.status], `article-status tag ${state.unverified ? "unverified" : "verified"}`));
+  }
   const origin = element("div", null, "fact-row");
   origin.append(element("dt", "情報源"), element("dd", article.source_name));
   const dates = element("div", null, "fact-row");
@@ -66,9 +70,8 @@ function cardFor({ article, state }) {
   const collected = element("time", `初回取得 ${dateLabel(article.collected_at)}`);
   if (article.collected_at) collected.dateTime = article.collected_at;
   source.append(collected);
-  if (states[state.status]) source.append(element("span", states[state.status], `tag ${state.unverified ? "unverified" : "verified"}`));
   facts.append(context, origin, dates);
-  card.append(h3, facts);
+  card.append(facts);
   if (state.unverified) card.append(element("p", `${state.event ? "開催日" : "期限"}は未確認です。公開日・初回取得日は${state.event ? "開催日" : "期限"}を示しません。最新情報は元記事でご確認ください。`, "freshness"));
   if (article.timing) {
     const start = article.timing.start;
