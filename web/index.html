@@ -15,17 +15,34 @@
 <header><div class="wrap masthead"><a href="./" class="brand">okinawa-watch<span>沖縄の暮らしに、小さな発見を。</span></a><span class="poc">試験運用</span></div></header>
 <main class="wrap">
   <section class="intro" aria-labelledby="page-title">
-    <h1 id="page-title">知ってよかった。沖縄の「今」を見つけよう。</h1>
-    <p class="lead">街の変化、地域の催し、暮らしのお得。気になる情報は、発信元で詳しく確認できます。</p>
-    <p id="updated" class="muted">収集状況を読み込んでいます…</p>
-    <p id="notice" class="notice" hidden></p>
+    <div class="intro-copy">
+      <h1 id="page-title">知ってよかった。沖縄の「今」を見つけよう。</h1>
+      <p class="lead">街の変化、地域の催し、暮らしのお得。気になる情報は、発信元で詳しく確認できます。</p>
+      <p id="updated" class="muted">収集状況を読み込んでいます…</p>
+      <p id="notice" class="notice" hidden></p>
+    </div>
+    <span class="intro-pattern" aria-hidden="true"></span>
   </section>
-  <section class="controls" aria-label="記事の絞り込み">
-    <div class="filters" role="group" aria-label="分類"><button type="button" data-filter="すべて" aria-pressed="true">すべて</button><button type="button" data-filter="今だけ" aria-pressed="false">今だけ</button><button type="button" data-filter="お得" aria-pressed="false">お得</button><button type="button" data-filter="発見" aria-pressed="false">発見</button><button type="button" data-filter="催し（日付未確認）" aria-pressed="false">催し（日付未確認）</button></div>
-    <p id="filter-help" class="filter-help"></p>
-    <div class="subfilters"><label>分野<select id="topic"><option value="">すべての分野</option></select></label><label class="check"><input id="expired" type="checkbox">終了日を過ぎた情報も表示</label><label class="check"><input id="older" type="checkbox">古い・掲載日不明の未確認情報も表示</label><span>表示区分ごとの新着順</span></div>
+  <section class="controls" aria-labelledby="filters-title">
+    <h2 id="filters-title" class="chapter-title">絞り込み</h2>
+    <div class="control-body">
+      <div class="filters" role="group" aria-label="分類">
+        <button type="button" data-filter="すべて" aria-pressed="true"><span class="selection-mark" aria-hidden="true">✓</span>すべて</button>
+        <button type="button" data-filter="今だけ" aria-pressed="false"><span class="selection-mark" aria-hidden="true">✓</span>今だけ</button>
+        <button type="button" data-filter="お得" aria-pressed="false"><span class="selection-mark" aria-hidden="true">✓</span>お得</button>
+        <button type="button" data-filter="発見" aria-pressed="false"><span class="selection-mark" aria-hidden="true">✓</span>発見</button>
+        <button type="button" data-filter="催し（日付未確認）" aria-pressed="false"><span class="selection-mark" aria-hidden="true">✓</span>催し（日付未確認）</button>
+      </div>
+      <p id="filter-help" class="filter-help"></p>
+      <div class="subfilters">
+        <label class="topic-filter"><span class="field-name">分野</span><select id="topic"><option value="">すべての分野</option></select></label>
+        <label class="check"><input id="expired" type="checkbox">終了日を過ぎた情報も表示</label>
+        <label class="check"><input id="older" type="checkbox">古い・掲載日不明の未確認情報も表示</label>
+        <span class="sort-note">表示区分ごとの新着順</span>
+      </div>
+    </div>
   </section>
-  <section id="results" tabindex="-1" aria-labelledby="list-title"><div class="list-heading"><h2 id="list-title">記事一覧</h2><p id="count" role="status" aria-live="polite"></p></div><p id="empty" hidden></p><button id="empty-events" type="button" hidden>日付未確認の催しを探す</button><ul id="articles"></ul></section>
+  <section id="results" tabindex="-1" aria-labelledby="list-title"><div class="list-heading"><h2 id="list-title" class="chapter-title">記事一覧</h2><p id="count" role="status" aria-live="polite"></p></div><p id="empty" hidden></p><button id="empty-events" type="button" hidden>日付未確認の催しを探す</button><ul id="articles"></ul></section>
   <details id="visibility-details" class="about"><summary id="visibility-summary">表示から外した情報</summary><p>終了日経過や掲載の古さで通常表示から外した情報です。絞り込みによる非表示は含みません。「すべて」と上のチェックで記事を表示できます。掲載の古さは、催しの終了を意味しません。</p><ul id="visibility-log"></ul></details>
   <details class="about"><summary>分類と情報の扱いについて</summary><p>分野は設定に一致する配信カテゴリを優先し、一致しない場合はタイトルのキーワードで分類します。「今だけ」「お得」の判定はタイトルに基づく機械的なルールです。誤分類・誤除外があります。</p><p>「今だけ」はタイトルに年を含む具体的な開催日や期限が確認できるものだけ。省略された年や日付、価格は補いません。日付未確認の催しは別の入口から探せます。公開日・取得日は開催日を示しません。</p><p id="freshness-help"></p><p>終了日の翌日から現行一覧に表示しません。日付は日本時間です。開催・営業・料金の最新情報は元記事をご確認ください。本文や画像は再配布しません。</p><p>政治・事件・事故などは初期ルールで抑制します。地方紙との話題重複は判定していません。</p></details>
 </main>
