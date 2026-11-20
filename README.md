@@ -12,7 +12,7 @@
 
 ## デザインとfavicon
 
-- 見た目は [Microsoft Fluent 2](https://fluent2.microsoft.design/) の考え方を**部分的に参考**にした独自実装です。フラットな白〜淡灰のサーフェス、控えめな境界線、カード・タブ・コマンドバー（絞り込み操作エリア）の階層を取り入れ、色と文言はサイト独自のものを維持しています。Fluent 2準拠・公式コンポーネントではなく、外部CDN・Webフォント・ライブラリも使いません。参考にした比較は [design-lab](https://github.com/YanTKYS/design-lab/blob/main/docs/comparison-guide.md) です。
+- このブランチは、宮古上布に着想した独自のデザイン「糸の交点」を地域ニュースに適用するPoCです。濃藍の地に格子帯と二重罫で操作と一覧を区切り、記事は生成りの面で、分類・地域、情報源、日付を分けて読めます。利用した資料は [okinawa-thread-ui v0.1](.agents/skills/okinawa-thread-ui/SKILL.md) です。
 - 開催日未確認・過去掲載・終了日経過に関する注意表示は、デザイン変更でも削除・弱体化しません。表示判定（`display.js`／`app.js`）はデザインと切り離して扱います。
 - `web/favicon.svg` は位置ピンと発見の点だけのオリジナルSVGです（外部ロゴ・公式シンボル不使用）。白い縁取りで明暗どちらのブラウザテーマでも判別でき、`index.html` から相対パスで参照するため、`/okinawa-watch/` のサブパスでも取得できます。`watch.py build` が `web/` 内の全ファイルをコピーするため追加設定は不要です。
 

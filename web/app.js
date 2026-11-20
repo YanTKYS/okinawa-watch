@@ -38,18 +38,30 @@ function cardFor({ article, state }) {
   if (!link) return null;
   const li = element("li");
   const card = element("article", null, state.status === "ended" ? "ended" : "");
-  const meta = element("div", null, "meta");
+  const facts = element("dl", null, "article-facts");
+  const context = element("div", null, "fact-row");
+  const meta = element("dd");
+  context.append(element("dt", "分類・地域"), meta);
   article.labels.forEach(label => meta.append(element("span", label, `tag ${label === "お得" ? "deal" : ""}`)));
   meta.append(element("span", article.topic), element("span", article.region || "地域未特定"));
   const states = {
     unverified_event: "開催日未確認", unverified_deadline: "期限未確認",
     upcoming: "開催・開始予定（日付確認済み）", confirmed: "開催日・期限確認済み", ended: "終了日経過"
   };
-  if (states[state.status]) meta.append(element("span", states[state.status], `tag ${state.unverified ? "unverified" : "verified"}`));
   const h3 = element("h3");
+  const mark = element("span", " ↗", "link-mark");
+  mark.setAttribute("aria-hidden", "true");
+  link.append(mark);
   h3.append(link);
-  const source = element("div", null, "meta");
-  source.append(element("span", article.source_name));
+  card.append(h3);
+  if (states[state.status]) {
+    card.append(element("p", states[state.status], `article-status tag ${state.unverified ? "unverified" : "verified"}`));
+  }
+  const origin = element("div", null, "fact-row");
+  origin.append(element("dt", "情報源"), element("dd", article.source_name));
+  const dates = element("div", null, "fact-row");
+  const source = element("dd");
+  dates.append(element("dt", "日付"), source);
   if (article.published_at) {
     const time = element("time", `公開 ${dateLabel(article.published_at)}`);
     time.dateTime = article.published_at;
@@ -58,7 +70,8 @@ function cardFor({ article, state }) {
   const collected = element("time", `初回取得 ${dateLabel(article.collected_at)}`);
   if (article.collected_at) collected.dateTime = article.collected_at;
   source.append(collected);
-  card.append(h3, meta, source);
+  facts.append(context, origin, dates);
+  card.append(facts);
   if (state.unverified) card.append(element("p", `${state.event ? "開催日" : "期限"}は未確認です。公開日・初回取得日は${state.event ? "開催日" : "期限"}を示しません。最新情報は元記事でご確認ください。`, "freshness"));
   if (article.timing) {
     const start = article.timing.start;
@@ -153,6 +166,7 @@ async function init() {
     $("freshness-help").textContent = `日付未確認の催しや期間限定の話題は、公開日（不明なら初回取得日）から${policy.unverified_max_age_days}日以内を通常表示します。古い・掲載日不明の情報はチェックで表示でき、理由も確認できます。表示を増やすと、過去掲載の情報は通常の情報より後に並びます。`;
     $("updated").textContent = data.updated_at ? `一覧更新 ${dateLabel(data.updated_at)}（日本時間） · 表示区分ごとの新着順` : "自動収集はまだ完了していません。";
     if (data.sample_mode) {
+      $("notice").dataset.kind = "sample";
       $("notice").hidden = false;
       $("notice").textContent = "手動で公開ページを確認した調査サンプルです。自動収集の成功を示すものではありません。掲載日と開催日は異なります。";
     }
